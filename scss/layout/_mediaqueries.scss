@@ -1,0 +1,197 @@
+@media only screen and (max-width: 1399.99px){
+    body{
+        main{
+            //SNOWBOARDS
+            .snowboards{
+                .brands{
+                    .burtonSB,.salomonSB,.capitaSB{
+                        .carousel{
+                            .carousel-control-next,.carousel-control-prev{
+                                height: 16vw;
+                            }
+                            .carousel-indicators{
+                                bottom: 10vw;
+                            }
+                            .carousel-inner{
+                                @include width-height(15vw,30vw);
+                                .carousel-item{
+                                    .card{
+                                        @include width-height(auto,29vw);
+                                        .card-body{
+                                            transform: translateY(1vw);
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            //BINDINGS
+            .bindings{
+                height: 35vw;
+                .brands{
+                    .burtonBi,.clewBi,.salomonBi{
+                        .carousel{
+                            align-items: center;
+                            .carousel-control-next,.carousel-control-prev{
+                                @include width-height(2vw,14vw);
+                            }
+                            .carousel-indicators{
+                                bottom: 10vw;
+                            }
+                            .carousel-inner{
+                                @include width-height(12vw,25vw);
+                                .carousel-item{
+                                    .card{
+                                        @include width-height(12vw,25vw);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            //BOOTS
+            .boots{
+                background-color: rgb(129, 136, 207);
+                border-radius:50px;
+                h2{
+                    text-align: center;
+                    font-size: 4vw;
+                    margin: 0px;
+                }
+                .brands{
+                    background: linear-gradient(rgb(129, 136, 207), rgb(249, 249, 249));
+                    @include display-flex(row,center,center,nowrap,4vw);
+                    padding: 30px;
+                    border-radius: 50px;
+                    .burtonB,.salomonB,.dcB{
+                        .carousel{
+                            @include width-height(15vw,25vw);
+                            .carousel-control-next,.carousel-control-prev{
+                                height: 15vw;
+                            }
+                            .carousel-indicators{ 
+                                bottom: 10vw;
+                            }
+                            .carousel-inner{
+                                @include width-height(15vw,25vw);
+                                .carousel-item{ 
+                                    .card{
+                                        @include width-height(auto,25vw);
+                                        .card-body{
+                                            @include display-flex(column,center,center,nowrap,0px);
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            //HELMETS 
+            .helmets{
+                .brands{
+                    .card{
+                        border-radius: 25px;
+                        gap: 10px;
+                        @include width-height(11vw,20vw);
+                        img{
+                            transform: translate(1vw,1vw);
+                        }
+                        .card-body{
+                            @include display-flex(column,center,center,nowrap,auto);
+                            padding: 10px;
+                        }
+                    }
+                }
+                
+            }
+            //GOGGLES
+            .goggles{
+                .brands{
+                    .card{
+                        img{
+                            transform: translate(0.5vw,1vw);
+                        }
+                    }
+                }
+                
+            }
+            
+        }
+    }
+    
+}
+
+@media only screen and (max-width: 1199.99px){
+    body{
+        main{
+            //GOGGLES
+            .goggles{
+                gap: 20px;
+                .brands{
+                    .card{
+                        @include width-height(12vw,24vw);
+                        img{
+                            transform: translate(0.5vw,1.5vw);
+                            @include width-height(11vw,11vw);
+                        }
+                        .card-body{
+                            @include width-height(12vw,24vw);
+                            
+                        }
+                    }
+                }
+            
+            }
+            //HELMETS
+            .helmets{
+                gap: 20px;
+                .brands{
+                    .card{
+                        @include width-height(12vw,22vw);
+                        img{
+                            @include width-height(10vw,10vw);
+                        }
+                        .card-body{
+                            @include width-height(12vw,22vw);
+                        }
+                    }
+                }
+                
+            }
+            //BINDINGS
+            .bindings{
+                height: 38vw;
+                .brands{
+                    .burtonBi,.clewBi,.salomonBi{
+                        .carousel{
+                            .carousel-indicators{
+                                transform: translate(1vw,1vw);
+                            }
+                            .carousel-inner{
+                                width: 15vw;
+                                .carousel-item{
+                                    .card{
+                                        width: 15vw;
+                                        img{
+                                            transform: translate(2vw,0.5vw);
+                                            @include width-height(11vw,11vw);
+                                        }
+                                        .card-body{
+                                            .card-title{
+                                                font-size: 1.5vw;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,320 @@
+body{
+    margin : 0;
+    padding : 0;
+    box-sizing: border-box;
+    background: url("../../images/circles.svg");
+    background-attachment: fixed;
+    background-size: cover;
+   header{
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    background: linear-gradient(to left,rgb(43, 187, 43) ,blue ,rgb(60, 60, 60));
+        h1{
+            text-align: center;
+            font-size: 4vw;
+            color: white;
+        }
+    }
+    main{
+        @include display-flex(column,center,center,nowrap,20px);
+        .title{
+            letter-spacing: 20px;
+            font-size: 5vw;
+            color: white;
+            background-color: black;
+            border-radius: 100px;
+            padding: 15px;
+        }
+        //SNOWBOARDS
+        .snowboards{
+            background: linear-gradient(rgb(141, 212, 155), rgb(249, 249, 249));
+            border-radius: 50px;
+            h2{
+                text-align: center;
+                font-size: 4vw;
+                margin: 0px;
+            }
+            .brands{
+                @include display-flex(row,center,center,nowrap,3vw);
+                padding: 30px;
+                border-radius: 50px;
+                .burtonSB,.salomonSB,.capitaSB{
+                    @include display-flex(column,center,center,nowrap,0px);
+                    h3{
+                        justify-content: center;
+                        font-size: 3vw;
+                    }
+                    .carousel{
+                        align-items: center;
+                        .carousel-control-next,.carousel-control-prev{
+                            height: 15vw;
+                            span{
+                                filter: invert(200%);
+                            }
+                        }
+                        .carousel-indicators{
+                            transform: translateX(1vw);
+                            bottom: 7.8vw;
+                            background-color: #999;
+                            @include width-height(9vw,1vw);
+                            padding-bottom: 20px;
+                        }
+                        .carousel-inner{
+                            @include width-height(15vw,25vw);
+                            .carousel-item{
+                                .card{
+                                    @include width-height(auto,25vw);
+                                    border-radius: 25px;
+                                    gap: 5px;
+                                    img{
+                                        @include width-height(12vw,15vw);
+                                        border-radius: 25px;
+                                        padding-top: 5px;
+                                        transform: translateX(1.45vw);
+                                    }
+                                    .card-body{
+                                        @include display-flex(column,center,center,nowrap,auto);
+                                        .card-title{
+                                            font-size: 1.2vw;
+                                            text-align: center;
+                                        }
+                                        .card-text{
+                                            font-size: 1.3vw;
+                                        }
+                                        .btn{
+                                            font-size: 1vw;
+                                            width: 5vw;
+                                            align-items: center;
+                                            
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        //BINDINGS
+        .bindings{
+            background: linear-gradient(rgb(33, 33, 33), rgb(249, 249, 249));
+            border-radius:50px;
+            @include width-height(auto,32vw);
+            h2{
+                color: white;
+                text-align: center;
+                font-size: 4vw;
+                margin: 0px;
+            }
+            .brands{
+                @include display-flex(row,center,center,nowrap,4vw);
+                padding: 30px;
+                border-radius: 50px;
+                background: transparent;
+                @include width-height(auto,20vw);
+                transform: translateY(5vw);
+                .burtonBi,.clewBi,.salomonBi{
+                    @include display-flex(column,center,center,nowrap,0px);
+                    h3{
+                        color: white;
+                        justify-content: center;
+                        font-size: 3vw;
+                    }
+                    .carousel{
+                        align-items: center;
+                        .carousel-control-next,.carousel-control-prev{
+                            @include width-height(2vw,12vw);
+                            span{
+                                filter: invert(200%);
+                            }
+                        }
+                        .carousel-indicators{
+                            transform: translateX(-0.5vw);
+                            bottom: 11vw;
+                            padding-bottom: 20px;
+                            background-color: #999;
+                            @include width-height(9vw,1vw);
+                        }
+                        .carousel-inner{
+                            @include width-height(12vw,25vw);
+                            .carousel-item{
+                                .card{
+                                    @include width-height(12vw,22vw);
+                                    gap: 20px;
+                                    border-radius: 25px;
+                                    img{
+                                        border-radius: 25px;
+                                        @include width-height(10vw,10vw);
+                                        transform: translate(1vw,1vw);
+                                        padding-top: 5px;
+                                        object-fit: cover;
+                                    }
+                                    .card-body{
+                                        @include display-flex(column,center,center,nowrap,auto);
+                                         transform: translateY(10px); 
+                                        .card-title{
+                                            font-size: 1.2vw;
+                                            text-align: center;
+                                        }
+                                        .card-text{
+                                            font-size: 1.3vw;
+                                        }
+                                        .btn{
+                                            font-size: 1vw;
+                                            width: 5vw;
+                                            align-items: center;
+                                            
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        //BOOTS
+        .boots{
+            background-color: rgb(129, 136, 207);
+            border-radius:50px;
+            h2{
+                text-align: center;
+                font-size: 4vw;
+                margin: 0px;
+            }
+            .brands{
+                background: linear-gradient(rgb(129, 136, 207), rgb(249, 249, 249));
+                @include display-flex(row,center,center,nowrap,4vw);
+                padding: 30px;
+                border-radius: 50px;
+                .burtonB,.salomonB,.dcB{
+                    @include display-flex(column,center,center,nowrap,1vw);
+                    h3{
+                        justify-content: center;
+                        font-size: 3vw;
+                    }
+                    .carousel{
+                        @include width-height(15vw,22vw);
+                        align-items: center;
+                        .carousel-control-next,.carousel-control-prev{
+                            height: 15vw;
+                            span{
+                                filter: invert(200%);
+                            }
+                        }
+                        .carousel-indicators{ 
+                            @include width-height(9vw,1vw);
+                            transform: translateX(1vw);
+                            bottom: 7.5vw;
+                            padding-bottom: 20px;
+                            background-color: #999;
+                        }
+                        .carousel-inner{
+                            @include width-height(15vw,25vw);
+                            .carousel-item{ 
+                                .card{
+                                    @include width-height(auto,22vw);
+                                    border-radius: 25px;
+                                    gap: 5px;
+                                    img{
+                                        border-radius: 25px;
+                                        @include width-height(10vw,10vw);
+                                        transform: translate(2.5vw,1vw);
+                                        padding-top: 5px;
+                                    }
+                                    .card-body{
+                                        @include display-flex(column,center,center,nowrap,0px);
+                                        transform: translateY(20px);
+                                        .card-title{
+                                            font-size: 1.2vw;
+                                            text-align: center;
+                                        }
+                                        .card-text{
+                                            font-size: 1.3vw;
+                                        }
+                                        .btn{
+                                            font-size: 1vw;
+                                            width: 5vw;
+                                            align-items: center;
+                                            
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        //HELMETS AND GOGGLES
+        .goggles,.helmets{
+            @include display-flex(flex,center,center,nowrap,auto);
+            flex-direction: column;
+            background:linear-gradient(rgb(230, 235, 153),white);
+            padding: 20px;
+            border-radius: 50px;
+            h2{
+                text-align: center;
+                font-size: 3vw;
+                margin: 5px; 
+            }
+            .brands{
+                @include display-flex(row,center,center,nowrap,15px);
+                flex-direction: row;
+                .card{
+                    border-radius: 25px;
+                    gap: 10px;
+                    @include width-height(10vw,20vw);
+                    img{
+                        border-radius: 25px;
+                        @include width-height(9vw,9vw);
+                        transform: translate(0.5vw,0.5vw);
+                        
+                    }
+                    .card-body{
+                        @include display-flex(column,center,center,nowrap,auto);
+                        padding: 10px;
+                        .card-title{
+                            font-size: 1.5vw;
+                            text-align: center;
+                        }
+                        .card-text{
+                            font-size: 1.3vw;
+                        }
+                        .btn{
+                            font-size: 1vw;
+                            align-items: center;
+                            
+                        }
+                    }
+                }
+            }
+            
+        }
+        
+    }
+    footer{
+        
+        
+        div{
+            border-radius: 100px;
+            border-width: 3px;
+            background-color: rgb(44, 44, 44);
+            margin: 20px;  
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            h6{
+                
+                font-size: 1vw;
+                color: white;
+                text-align: center;
+                a{
+                    text-decoration-color:orange;
+                    color: orange;
+                }
+            }
+        }
+        
+    } 
+}
