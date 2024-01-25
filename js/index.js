@@ -1,24 +1,15 @@
 let cartPrice = 0;
-let cart = [];
+let cart= [];
 
 //adds an item to cart and adds the price of the item to cartPrice
-function addToCart(item,itemPrice){
+function addToCart(itemName,itemPrice){
     let checkCartItems;
     cartPrice+= itemPrice;
     console.log("Your cart price is: "+cartPrice)
-    cart.push(item);
-    console.log(item+" added to cart");
-    checkCartItems = prompt("Do you want to see your cart items? YES/NO").toLowerCase();
-    if(checkCartItems === "yes")
-        showCartItems();
+    cart.push(itemName);
+    console.log(itemName+" added to cart");
 }
-//deletes an item from cart and deletes the price of the item from cartPrice -- NOT USED YET
-function deleteFromCart(item, itemPrice){
-    cartPrice -= itemPrice;
-    cart.filter(item);
-    console.log(item+" deleted from cart");
-}
-//shows all the items from the cart
+//when clicks on cart icon shows all the items from the cart on the console
 function showCartItems(){
     alert("You have "+cart.length + " item/s in your cart. Check the console for more info");
     console.log("-----ITEMS LIST-----");
