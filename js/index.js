@@ -95,22 +95,6 @@ function addToCart(itemName,itemPrice){
         console.log(itemName+" already added to cart!");
     }
 }
-function addToCartNEW(typeOfEquipment,id){
-    let product = products.find(the => the.kind==typeOfEquipment).elements.find(the => the.id==id);
-    let name = product.name;
-    let price = product.price;
-    if(cart.find((item)=>item.getName() === name) === undefined || cart.length === 0){
-        cart.push(new Item(name,price));
-        cartPrice += price;
-        console.log(name+" added to cart");
-        console.log("Your cart price is: "+cartPrice);
-        console.log("-------------------------");
-    }
-    else{
-        alert(itemName+" already added to cart!");
-        console.log(itemName+" already added to cart!");
-    }
-}
 
 //removes an item from the cart, if it exists, and subtracts it value from the cartPrice.
 function removeFromCart(itemName){
@@ -122,20 +106,8 @@ function removeFromCart(itemName){
         console.log("-------------------------");
     }
 }
-//removes an item from the cart, if it exists, and subtracts it value from the cartPrice.
-function removeFromCartNEW(typeOfEquipment,id){
-    const itemToRemove = products.find(the => the.kind==typeOfEquipment).elements.find(the => the.id==id);
-    if(itemToRemove != undefined){
-        let name = itemToRemove.name;
-        let price = itemToRemove.price;
-        cart.splice(cart.indexOf(cart.find(the => the.name == name)),1);
-        cartPrice -= price;
-        console.log(name+" removed from cart and cartprice is: "+cartPrice); 
-        console.log("-------------------------");
-    }
-}
 
-//Removes all items from cart
+//Removes all items from cart --- NOT USED YET
 function removeAll() {
     cart.splice(0, cart.length); 
     cartPrice = 0; 
@@ -158,15 +130,4 @@ function showCartItems(){
     }
 }
 
-// addToCart('A',900);
-// addToCart('B',100);
-// addToCart('A',900);
-// showCartItems();
-// addToCart('C',200);
-// showCartItems();
-// console.log("-------------------");
-// removeFromCart('B');
-// showCartItems();
-// removeAll();
-// showCartItems();
-// console.log("Cartprice is: "+cartPrice);
+
