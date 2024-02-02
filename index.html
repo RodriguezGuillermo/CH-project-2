@@ -12,9 +12,15 @@
       <h1>
         CarveIn
       </h1>
-      <svg xmlns="http://www.w3.org/2000/svg" onclick="showCartItems()" width="32" height="32" class="bi bi-cart" type="button" viewBox="0 0 16 16">
-        <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M3.102 4l1.313 7h8.17l1.313-7zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2"/>
-      </svg>
+      <img id="cartBtn" type="button" src="images/icons/bag.svg" alt="">
+      <div id="cartInfo" class="cart-container">
+        <div>
+          <h3>My Cart</h3>
+          <button onclick="removeAll()">Clear</button>
+        </div>
+        <ul id="cartList">
+        </ul>
+    </div>
     </header>
 
     <main>
@@ -34,32 +40,32 @@
               </div>
               <div class="carousel-inner">
                 <div class="carousel-item active">
-                  <div class="card">
+                  <div class="card" >
                     <img src="./images/Snowboards/Burton/burtonFamilyTreeGrillMaster.webp" class="card-img-top" alt="...">
-                    <div class="card-body">
+                    <div class="card-body" id="Burton Family Tree Grill Master">
                       <h5 class="card-title">Family Tree</h5>
                       <p class="card-text" >$600USD</p>
-                      <a href="#" class="btn btn-primary" onclick="addToCart('Burton Family Tree Grill Master',600)">Buy</a>
+                      <a href="#" class="btn btn-primary" onclick="addToCart(this)">Buy</a>
                     </div>
                   </div>
                 </div>
                 <div class="carousel-item">
                   <div class="card">
                     <img src="./images/Snowboards/Burton/burtonMysteryHometownHero.webp" class="card-img-top" alt="...">
-                    <div class="card-body">
+                    <div class="card-body" id="Burton Mystery Hometown Hero">
                       <h5 class="card-title" >HomeTown</h5>
                       <p class="card-text" >$700USD</p>
-                      <a href="#" class="btn btn-primary" onclick="addToCart('Burton Mystery Hometown Hero',700)">Buy</a>
+                      <a href="#" class="btn btn-primary" onclick="addToCart(this)">Buy</a>
                     </div>
                   </div>
                 </div>
                 <div class="carousel-item">
                   <div class="card">
                     <img src="./images/Snowboards/Burton/burtonThrowbackSB.webp" class="card-img-top" alt="...">
-                    <div class="card-body">
+                    <div class="card-body" id="Burton Throwback SB">
                       <h5 class="card-title">Throwback SB</h5>
                       <p class="card-text">$500USD</p>
-                      <a href="#" class="btn btn-primary" onclick="addToCart('Burton Throwback SB',500)">Buy</a>
+                      <a href="#" class="btn btn-primary" onclick="addToCart(this)">Buy</a>
                     </div>
                   </div>
                 </div>
@@ -86,30 +92,30 @@
                 <div class="carousel-item active">
                   <div class="card">
                     <img src="./images/Snowboards/Capita/capitaAeronaut.webp" class="card-img-top" alt="...">
-                    <div class="card-body">
+                    <div class="card-body" id="Capita Aeronaut">
                       <h5 class="card-title">Aeronaut</h5>
                       <p class="card-text">$650USD</p>
-                      <a href="#" class="btn btn-primary" onclick="addToCart('Capita Aeronaut',650)">Buy</a>
+                      <a href="#" class="btn btn-primary" onclick="addToCart(this)">Buy</a>
                     </div>
                   </div>
                 </div>
                 <div class="carousel-item">
                   <div class="card">
                     <img src="./images/Snowboards/Capita/capitaDOA.webp" class="card-img-top" alt="...">
-                    <div class="card-body">
+                    <div class="card-body" id="Capita DOA">
                       <h5 class="card-title">DOA</h5>
                       <p class="card-text">$800USD</p>
-                      <a href="#" class="btn btn-primary" onclick="addToCart('Capita DOA',800)">Buy</a>
+                      <a href="#" class="btn btn-primary" onclick="addToCart(this)">Buy</a>
                     </div>
                   </div>
                 </div>
                 <div class="carousel-item">
                   <div class="card">
                     <img src="./images/Snowboards/Capita/capitaParadise.webp" class="card-img-top" alt="...">
-                    <div class="card-body">
+                    <div class="card-body" id="Capita Paradise">
                       <h5 class="card-title">Paradise</h5>
                       <p class="card-text">$550USD</p>
-                      <a href="#" class="btn btn-primary" onclick="addToCart('Capita Paradise',550)">Buy</a>
+                      <a href="#" class="btn btn-primary" onclick="addToCart(this)">Buy</a>
                     </div>
                   </div>
                 </div>
@@ -136,30 +142,30 @@
                 <div class="carousel-item active">
                   <div class="card">
                     <img src="./images/Snowboards/Salomon/salomonAssasin.webp" class="card-img-top" alt="...">
-                    <div class="card-body">
+                    <div class="card-body" id="Salomon Assasin">
                       <h5 class="card-title">Assasin</h5>
                       <p class="card-text">$750USD</p>
-                      <a href="#" class="btn btn-primary" onclick="addToCart('Salomon Assasin',750)">Buy</a>
+                      <a href="#" class="btn btn-primary" onclick="addToCart(this)">Buy</a>
                     </div>
                   </div>
                 </div>
                 <div class="carousel-item">
                   <div class="card">
                     <img src="./images/Snowboards/Salomon/salomonAssasinPro.webp" class="card-img-top" alt="...">
-                    <div class="card-body">
+                    <div class="card-body" id="Salomon Assasin Pro">
                       <h5 class="card-title">Assasin Pro</h5>
                       <p class="card-text">$800USD</p>
-                      <a href="#" class="btn btn-primary" onclick="addToCart('Salomon Assasin Pro',800)">Buy</a>
+                      <a href="#" class="btn btn-primary" onclick="addToCart(this)">Buy</a>
                     </div>
                   </div>
                 </div>
                 <div class="carousel-item">
                   <div class="card">
                     <img src="./images/Snowboards/Salomon/salomonRumbleFish.webp" class="card-img-top" alt="...">
-                    <div class="card-body">
+                    <div class="card-body" id="Salomon Rumble Fish">
                       <h5 class="card-title">Rumble Fish</h5>
                       <p class="card-text">$750USD</p>
-                      <a href="#" class="btn btn-primary" onclick="addToCart('Salomon Rumble Fish',750)">Buy</a>
+                      <a href="#" class="btn btn-primary" onclick="addToCart(this)">Buy</a>
                     </div>
                   </div>
                 </div>
@@ -183,50 +189,50 @@
         <div class="brands">
           <div class="card">
             <img src="./images/Goggles/anonHelix.webp" class="card-img-top" alt="...">
-            <div class="card-body">
+            <div class="card-body" id="Anon Helix">
               <h5 class="card-title">Anon Helix</h5>
               <p class="card-text">$300USD</p>
-              <a href="#" class="btn btn-primary" onclick="addToCart('Anon Helix',300)">Buy</a>
+              <a href="#" class="btn btn-primary" onclick="addToCart(this)">Buy</a>
             </div>
           </div>
           <div class="card">
             <img src="./images/Goggles/anonM4.webp" class="card-img-top" alt="...">
-            <div class="card-body">
+            <div class="card-body" id="Anon M4">
               <h5 class="card-title">Anon M4</h5>
               <p class="card-text">$350USD</p>
-              <a href="#" class="btn btn-primary" onclick="addToCart('Anon M4',350)">Buy</a>
+              <a href="#" class="btn btn-primary" onclick="addToCart(this)">Buy</a>
             </div>
           </div>
           <div class="card">
             <img src="./images/Goggles/anonM4s.webp" class="card-img-top" alt="...">
-            <div class="card-body">
+            <div class="card-body" id="Anon M4s">
               <h5 class="card-title">Anon M4s</h5>
               <p class="card-text">$325USD</p>
-              <a href="#" class="btn btn-primary" onclick="addToCart('Anon M4s',325)">Buy</a>
+              <a href="#" class="btn btn-primary" onclick="addToCart(this)">Buy</a>
             </div>
           </div>
           <div class="card">
             <img src="./images/Goggles/anonNesa.webp" class="card-img-top" alt="...">
-            <div class="card-body">
+            <div class="card-body" id="Anon Nesa">
               <h5 class="card-title">Anon Nesa</h5>
               <p class="card-text">$280USD</p>
-              <a href="#" class="btn btn-primary" onclick="addToCart('Anon Nesa',280)">Buy</a>
+              <a href="#" class="btn btn-primary" onclick="addToCart(this)">Buy</a>
             </div>
           </div>
           <div class="card">
             <img src="./images/Goggles/anonSync.webp" class="card-img-top" alt="...">
-            <div class="card-body">
+            <div class="card-body" id="Anon Sync">
               <h5 class="card-title">Anon Sync</h5>
               <p class="card-text">$350USD</p>
-              <a href="#" class="btn btn-primary" onclick="addToCart('Anon Sync',350)">Buy</a>
+              <a href="#" class="btn btn-primary" onclick="addToCart(this)">Buy</a>
             </div>
           </div>
           <div class="card">
             <img src="./images/Goggles/anonSyncLow.webp" class="card-img-top" alt="...">
-            <div class="card-body">
+            <div class="card-body" id="Anon SyncL">
               <h5 class="card-title">Anon SyncL</h5>
               <p class="card-text">$300USD</p>
-              <a href="#" class="btn btn-primary" onclick="addToCart('Anon SyncL',300)">Buy</a>
+              <a href="#" class="btn btn-primary" onclick="addToCart(this)">Buy</a>
             </div>
           </div>
         </div>
@@ -247,30 +253,30 @@
                 <div class="carousel-item active">
                   <div class="card">
                     <img src="./images/Boots/Burton/burtonIonStepOn.webp" class="card-img-top" alt="...">
-                    <div class="card-body">
+                    <div class="card-body" id="Burton Ion StepOn">
                       <h5 class="card-title">Ion StepOn</h5>
                       <p class="card-text">$300USD</p>
-                      <a href="#" class="btn btn-primary" onclick="addToCart('Burton Ion StepOn',300)">Buy</a>
+                      <a href="#" class="btn btn-primary" onclick="addToCart(this)">Buy</a>
                     </div>
                   </div>
                 </div>
                 <div class="carousel-item">
                   <div class="card">
                     <img src="./images/Boots/Burton/burtonPhotonStepOn.webp" class="card-img-top" alt="...">
-                    <div class="card-body">
+                    <div class="card-body" id="Burton Photon StepOn">
                       <h5 class="card-title">Photon SO</h5>
                       <p class="card-text">$350USD</p>
-                      <a href="#" class="btn btn-primary" onclick="addToCart('Burton Photon StepOn',350)">Buy</a>
+                      <a href="#" class="btn btn-primary" onclick="addToCart(this)">Buy</a>
                     </div>
                   </div>
                 </div>
                 <div class="carousel-item">
                   <div class="card">
                     <img src="./images/Boots/Burton/burtonSwathStepOn.webp" class="card-img-top" alt="...">
-                    <div class="card-body">
+                    <div class="card-body" id="Burton Swath StepOn">
                       <h5 class="card-title">Swath StepOn</h5>
                       <p class="card-text">$290USD</p>
-                      <a href="#" class="btn btn-primary" onclick="addToCart('Burton Swath StepOn',290)">Buy</a>
+                      <a href="#" class="btn btn-primary" onclick="addToCart(this)">Buy</a>
                     </div>
                   </div>
                 </div>
@@ -297,30 +303,30 @@
                 <div class="carousel-item active">
                   <div class="card">
                     <img src="./images/Boots/DC/dcJudgeStepOn.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
+                    <div class="card-body" id="DC Judge StepOn">
                       <h5 class="card-title">Judge StepOn</h5>
                       <p class="card-text">$350USD</p>
-                      <a href="#" class="btn btn-primary" onclick="addToCart('DC Judge StepOn',350)">Buy</a>
+                      <a href="#" class="btn btn-primary" onclick="addToCart(this)">Buy</a>
                     </div>
                   </div>
                 </div>
                 <div class="carousel-item">
                   <div class="card">
                     <img src="./images/Boots/DC/dcPhaseProStepOn.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
+                    <div class="card-body" id="DC PhasePro StepOn">
                       <h5 class="card-title">PhasePro SO</h5>
                       <p class="card-text">$350USD</p>
-                      <a href="#" class="btn btn-primary" onclick="addToCart('DC PhasePro StepOn',350)">Buy</a>
+                      <a href="#" class="btn btn-primary" onclick="addToCart(this)">Buy</a>
                     </div>
                   </div>
                 </div>
                 <div class="carousel-item">
                   <div class="card">
                     <img src="./images/Boots/DC/dcPremierHybrid.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
+                    <div class="card-body" id="DC Premier Hybrid">
                       <h5 class="card-title">Premier</h5>
                       <p class="card-text">$300USD</p>
-                      <a href="#" class="btn btn-primary" onclick="addToCart('DC Premier Hybrid',300)">Buy</a>
+                      <a href="#" class="btn btn-primary" onclick="addToCart(this)">Buy</a>
                     </div>
                   </div>
                 </div>
@@ -345,32 +351,32 @@
               </div>
               <div class="carousel-inner">
                 <div class="carousel-item active">
-                  <div class="card">
+                  <div class="card" >
                     <img src="./images/Boots/Salomon/salomonDialogue.webp" class="card-img-top" alt="...">
-                    <div class="card-body">
+                    <div class="card-body" id="Salomon Dialogue">
                       <h5 class="card-title">Dialogue</h5>
                       <p class="card-text">$250USD</p>
-                      <a href="#" class="btn btn-primary" onclick="addToCart('Salomon Dialogue',250)">Buy</a>
+                      <a href="#" class="btn btn-primary" onclick="addToCart(this)">Buy</a>
                     </div>
                   </div>
                 </div>
                 <div class="carousel-item">
                   <div class="card">
                     <img src="./images/Boots/Salomon/salomonDialogueDual.webp" class="card-img-top" alt="...">
-                    <div class="card-body">
+                    <div class="card-body" id="Salomon Dialogue Dual">
                       <h5 class="card-title">Dialogue Dual</h5>
                       <p class="card-text">$300USD</p>
-                      <a href="#" class="btn btn-primary" onclick="addToCart('Salomon Dialogue Dual',300)">Buy</a>
+                      <a href="#" class="btn btn-primary" onclick="addToCart(this)">Buy</a>
                     </div>
                   </div>
                 </div>
                 <div class="carousel-item">
                   <div class="card">
                     <img src="./images/Boots/Salomon/salomonLaunch.webp" class="card-img-top" alt="...">
-                    <div class="card-body">
+                    <div class="card-body" id="Salomon Launch">
                       <h5 class="card-title">Launch</h5>
                       <p class="card-text">$350USD</p>
-                      <a href="#" class="btn btn-primary" onclick="addToCart('Salomon Launch',350)">Buy</a>
+                      <a href="#" class="btn btn-primary" onclick="addToCart(this)">Buy</a>
                     </div>
                   </div>
                 </div>
@@ -393,50 +399,50 @@
         <div class="brands">
           <div class="card">
             <img src="./images/Helmets/anonEcho.webp" class="card-img-top" alt="...">
-            <div class="card-body">
+            <div class="card-body" id="Anon Echo">
               <h5 class="card-title">Anon Echo</h5>
               <p class="card-text">$350USD</p>
-              <a href="#" class="btn btn-primary" onclick="addToCart('Anon Echo',350)">Buy</a>
+              <a href="#" class="btn btn-primary" onclick="addToCart(this)">Buy</a>
             </div>
           </div>
           <div class="card">
             <img src="./images/Helmets/anonMerak.webp" class="card-img-top" alt="...">
-            <div class="card-body">
+            <div class="card-body" id="Anon Merak">
               <h5 class="card-title">Anon Merak</h5>
               <p class="card-text">$370USD</p>
-              <a href="#" class="btn btn-primary" onclick="addToCart('Anon Merak',370)">Buy</a>
+              <a href="#" class="btn btn-primary" onclick="addToCart(this)">Buy</a>
             </div>
           </div>
           <div class="card">
             <img src="./images/Helmets/anonMerakWavecel.webp" class="card-img-top" alt="...">
-            <div class="card-body">
+            <div class="card-body" id="Anon Merak Wavecel">
               <h5 class="card-title">Anon MW</h5>
               <p class="card-text">$325USD</p>
-              <a href="#" class="btn btn-primary" onclick="addToCart('Anon Merak Wavecel',325)">Buy</a>
+              <a href="#" class="btn btn-primary" onclick="addToCart(this)">Buy</a>
             </div>
           </div>
           <div class="card">
             <img src="./images/Helmets/anonRaider.webp" class="card-img-top" alt="...">
-            <div class="card-body">
+            <div class="card-body" id="Anon Raider">
               <h5 class="card-title">Anon Raider</h5>
               <p class="card-text">$380USD</p>
-              <a href="#" class="btn btn-primary" onclick="addToCart('Anon Raider',380)">Buy</a>
+              <a href="#" class="btn btn-primary" onclick="addToCart(this)">Buy</a>
             </div>
           </div>
           <div class="card">
             <img src="./images/Helmets/anonRime.webp" class="card-img-top" alt="...">
-            <div class="card-body">
+            <div class="card-body" id="Anon Rime">
               <h5 class="card-title">Anon Rime</h5>
               <p class="card-text">$300USD</p>
-              <a href="#" class="btn btn-primary" onclick="addToCart('Anon Rime',300)">Buy</a>
+              <a href="#" class="btn btn-primary" onclick="addToCart(this)">Buy</a>
             </div>
           </div>
           <div class="card">
             <img src="./images/Helmets/anonRodan.webp" class="card-img-top" alt="...">
-            <div class="card-body">
+            <div class="card-body" id="Anon Rodan">
               <h5 class="card-title">Anon Rodan</h5>
               <p class="card-text">$300USD</p>
-              <a href="#" class="btn btn-primary" onclick="addToCart('Anon Rodan',300)">Buy</a>
+              <a href="#" class="btn btn-primary" onclick="addToCart(this)">Buy</a>
             </div>
           </div>
         </div>
@@ -457,30 +463,30 @@
                 <div class="carousel-item active">
                   <div class="card">
                     <img src="./images/Bindings/Burton/burtonMissionRe.webp" class="card-img-top" alt="...">
-                    <div class="card-body">
+                    <div class="card-body" id="Burton MissionRe">
                       <h5 class="card-title">MissionRe</h5>
                       <p class="card-text">$250USD</p>
-                      <a href="#" class="btn btn-primary" onclick="addToCart('Burton MissionRe',250)">Buy</a>
+                      <a href="#" class="btn btn-primary" onclick="addToCart(this)">Buy</a>
                     </div>
                   </div>
                 </div>
                 <div class="carousel-item">
                   <div class="card">
                     <img src="./images/Bindings/Burton/burtonStepOnGenesis.webp" class="card-img-top" alt="...">
-                    <div class="card-body">
+                    <div class="card-body" id="Burton StepOn Genesis">
                       <h5 class="card-title">SO Genesis</h5>
                       <p class="card-text">$300USD</p>
-                      <a href="#" class="btn btn-primary" onclick="addToCart('Burton SO Genesis',300)">Buy</a>
+                      <a href="#" class="btn btn-primary" onclick="addToCart(this)">Buy</a>
                     </div>
                   </div>
                 </div>
                 <div class="carousel-item">
-                  <div class="card">
+                  <div class="card" >
                     <img src="./images/Bindings/Burton/burtonStepOnRe.webp" class="card-img-top" alt="...">
-                    <div class="card-body">
+                    <div class="card-body" id="Burton StepOn Re">
                       <h5 class="card-title">StepOnRe</h5>
                       <p class="card-text">$290USD</p>
-                      <a href="#" class="btn btn-primary" onclick="addToCart('Burton SO Re',290)">Buy</a>
+                      <a href="#" class="btn btn-primary" onclick="addToCart(this)">Buy</a>
                     </div>
                   </div>
                 </div>
@@ -506,20 +512,20 @@
                 <div class="carousel-item active">
                   <div class="card">
                     <img src="./images/Bindings/Clew/clewFreedomBlack.webp" class="card-img-top" alt="...">
-                    <div class="card-body">
+                    <div class="card-body" id="Clew Freedom Black">
                       <h5 class="card-title">Freedom B</h5>
                       <p class="card-text">$200USD</p>
-                      <a href="#" class="btn btn-primary" onclick="addToCart('Clew Freedom Black',200)">Buy</a>
+                      <a href="#" class="btn btn-primary" onclick="addToCart(this)">Buy</a>
                     </div>
                   </div>
                 </div>
                 <div class="carousel-item">
                   <div class="card">
                     <img src="./images/Bindings/Clew/clewFreedomWhite.webp" class="card-img-top" alt="...">
-                    <div class="card-body">
+                    <div class="card-body" id="Clew Freedom White">
                       <h5 class="card-title">Freedom W</h5>
                       <p class="card-text">$220USD</p>
-                      <a href="#" class="btn btn-primary" onclick="addToCart('Clew Freedom White',220)">Buy</a>
+                      <a href="#" class="btn btn-primary" onclick="addToCart(this)">Buy</a>
                     </div>
                   </div>
                 </div>
@@ -544,32 +550,32 @@
               </div>
               <div class="carousel-inner">
                 <div class="carousel-item active">
-                  <div class="card">
+                  <div class="card" >
                     <img src="./images/Bindings/Salomon/salomonDistrict.webp" class="card-img-top" alt="...">
-                    <div class="card-body">
+                    <div class="card-body" id="Salomon District">
                       <h5 class="card-title">District</h5>
                       <p class="card-text">$250USD</p>
-                      <a href="#" class="btn btn-primary" onclick="addToCart('Salomon District',250)">Buy</a>
+                      <a href="#" class="btn btn-primary" onclick="addToCart(this)">Buy</a>
                     </div>
                   </div>
                 </div>
                 <div class="carousel-item">
                   <div class="card">
                     <img src="./images/Bindings/Salomon/salomonMirage.webp" class="card-img-top" alt="...">
-                    <div class="card-body">
+                    <div class="card-body" id="Salomon Mirage">
                       <h5 class="card-title">Mirage</h5>
                       <p class="card-text">$300USD</p>
-                      <a href="#" class="btn btn-primary" onclick="addToCart('Salomon Mirage',300)">Buy</a>
+                      <a href="#" class="btn btn-primary" onclick="addToCart(this)">Buy</a>
                     </div>
                   </div>
                 </div>
                 <div class="carousel-item">
                   <div class="card">
                     <img src="./images/Bindings/Salomon/salomonRhythm.webp" class="card-img-top" alt="...">
-                    <div class="card-body">
+                    <div class="card-body" id="Salomon Rhythm">
                       <h5 class="card-title">Rhythm</h5>
                       <p class="card-text">$300USD</p>
-                      <a href="#" class="btn btn-primary" onclick="addToCart('Salomon Rhythm',300)">Buy</a>
+                      <a href="#" class="btn btn-primary" onclick="addToCart(this)">Buy</a>
                     </div>
                   </div>
                 </div>

@@ -16,13 +16,35 @@ body{
             font-size: 4vw;
             color: white;
         }
-        svg{
-            
+        img{
             background-color: white;
             border-radius: 10px;
             padding: 5px;
             transform: translateX(35vw);
             @include width-height(3.5vw,3.5vw);
+        }
+        .cart-container{
+            //display: none;
+            position: fixed;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            transform: translate(40vw,5.5vw);
+            border-radius: 25px;
+            background-color: rgb(175, 174, 174);
+            @include display-flex(column,center,center,nowrap,2px);
+            
+            div{
+                @include display-flex(row,space-between,center,nowrap,10px);
+                padding: 10px;
+                button{
+                    border-radius: 10px;
+                    border-style: groove;
+                    background-color: black;
+                    color: white;
+                    font-weight: bolder;
+                    border-color: white;
+                    padding: 5px;
+                }
+            }
         }
     }
     main{
