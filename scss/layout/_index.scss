@@ -24,14 +24,13 @@ body{
             @include width-height(3.5vw,3.5vw);
         }
         .cart-container{
-            //display: none;
             position: fixed;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            transform: translate(40vw,5.5vw);
+            transform: translate(35vw,5.5vw);
             border-radius: 25px;
             background-color: rgb(175, 174, 174);
             @include display-flex(column,center,center,nowrap,2px);
-            
+            display: none;
             div{
                 @include display-flex(row,space-between,center,nowrap,10px);
                 padding: 10px;

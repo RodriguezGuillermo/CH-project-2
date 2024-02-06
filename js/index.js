@@ -5,11 +5,11 @@ let products =
     [
         //SNOWBOARDS
         //Burton brand
-        {name:'Burton Family Tree Grill Master',price:600},
+        {name:'Burton Family Tree Grill Master',price:500},
         {name:'Burton Mystery Hometown Hero',price:700},
         {name:'Burton Throwback SB',price:500},
         //Capita brand
-        {name:'Capita Aeronaut',price:650},
+        {name:'Capita Aeronaut',price:550},
         {name:'Capita DOA',price:800},
         {name:'Capita Paradise',price:550},
         //Salomon brand
@@ -75,45 +75,6 @@ class Item{
     }
 }
 
-//adds an item to car,if its not already added, and adds the price of the item to cartPrice.
-function addToCart(elem){
-    let prodId = elem.parentNode.id;
-    let name = products.find(the => the.name == prodId).name;
-    let price = products.find(the => the.name == prodId).price;
-
-    if(cart.find(item=>item.getName() === name) === undefined || cart.length === 0){
-        cart.push(new Item(name,price));
-        cartPrice+= price;
-        console.log(name+" added to cart");
-        console.log("Your cart price is: "+cartPrice);
-        console.log("-------------------------");
-    }
-    else{
-        alert(name+" already added to cart!");
-        console.log(name+" already added to cart!");
-    }
-}
-
-//removes an item from the cart, if it exists, and subtracts it value from the cartPrice.--NOT USED YET
-function removeFromCart(itemName){
-    const itemToRemove = cart.find((item)=>item.getName() === itemName);
-    if(itemToRemove != undefined){
-        cart.splice(cart.indexOf(itemToRemove),1);
-        cartPrice -= itemToRemove.getPrice();
-        console.log(itemName+" removed from cart and cartprice is: "+cartPrice); 
-        console.log("-------------------------");
-    }
-}
-
-//Removes all items from cart --- NOT USED YET
-function removeAll() {
-    console.clear();
-    cart.splice(0, cart.length); 
-    cartPrice = 0; 
-    console.log("Cart is empty!");
-    console.log("-------------------------");
-}
-
 //When clicks on cart icon shows all the items from the cart on the console
 function showCartItems(){
     console.clear();
@@ -130,17 +91,72 @@ function showCartItems(){
     }
 }
 
-//Shows the cart when the cart icon is clicked
 document.addEventListener('DOMContentLoaded', function () {
     const cartBtn = document.getElementById('cartBtn');
     const cartInfo = document.getElementById('cartInfo');
+    const cartList = document.getElementById('cartList');
+    const clearBtn = document.getElementById('clearButton');
 
+    //Shows the cart when the cart icon is clicked
     cartBtn.addEventListener('click', function () {
-        // Toggle (alternar) la visibilidad del carrito
-        if (cartInfo.style.display === 'none' || cartInfo.style.display === '') {
-            cartInfo.style.display = 'block';
-        } else {
-            cartInfo.style.display = 'none';
-        }
+        cartInfo.style.display = (cartInfo.style.display === 'none' || cartInfo.style.display === '') ? 'block' : 'none';
+        showCart();
     });
+
+    //Removes all items from cart
+    clearBtn.addEventListener('click',function(){
+        cart.length > 0 ? cart.splice(0, cart.length) : alert("Cart empty!");
+        //Updates the cart
+        showCart();
+    });
+    
+    // removes a single item from the cart by its index.
+    function removeFromCart(index) {
+        cart.splice(index, 1);
+        // Updates the cart
+        showCart();
+    }
+
+    // Shows the products in the cart.
+    function showCart() {
+        //cleans the cartList
+        cartList.innerHTML = '';
+
+        //iterates on the cart products and shows them
+        cart.forEach(function (product, index) {
+            const cartItem = document.createElement('li');
+            cartItem.textContent = `${product.getName()} - $${product.getPrice()}`;
+            
+            //add a button to remove a single product
+            const removeBtn = document.createElement('button');
+            removeBtn.textContent = 'X';
+            removeBtn.addEventListener('click', function () {
+                removeFromCart(index);
+            });
+
+            cartItem.appendChild(removeBtn);
+            cartList.appendChild(cartItem);
+        });
+    }
+
+    //adds an item to cart,if its not already added, and adds the price of the item to cartPrice.
+    window.addToCart = function(elem){
+        //Gets the obj on the product array by the id from the parent node
+        let prodId = elem.parentNode.id;
+        let name = products.find(the => the.name == prodId).name;
+        let price = products.find(the => the.name == prodId).price;
+
+        //if the item is already added, it doesnt adds it. otherwhise it does.
+        if(cart.find(item=>item.getName() === name) === undefined || cart.length === 0){
+            cart.push(new Item(name,price));
+            cartPrice+= price;
+            console.log(name+" added to cart.\nYour cart price is: "+cartPrice+" \n-------------------------");
+        }
+        else{
+            alert(name+" already added to cart!");
+            console.log(name+" already added to cart!");
+        }
+        //update the cart
+        showCart();
+    }
 });
