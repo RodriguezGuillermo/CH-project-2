@@ -5,11 +5,11 @@ let products =
     [
         //SNOWBOARDS
         //Burton brand
-        {name:'Burton Family Tree Grill Master',price:500},
+        {name:'Burton Family Tree Grill Master',price:600},
         {name:'Burton Mystery Hometown Hero',price:700},
         {name:'Burton Throwback SB',price:500},
         //Capita brand
-        {name:'Capita Aeronaut',price:550},
+        {name:'Capita Aeronaut',price:650},
         {name:'Capita DOA',price:800},
         {name:'Capita Paradise',price:550},
         //Salomon brand
@@ -105,6 +105,12 @@ document.addEventListener('DOMContentLoaded', function () {
 
     //Removes all items from cart
     clearBtn.addEventListener('click',function(){
+        //clears thhe console
+        window.console.clear();
+        //prints all the items to remove
+        cart.forEach(item =>
+            console.log(item.getName()+" removed from cart!"));
+        //checks if the cart is empty, if its not it removes all    
         cart.length > 0 ? cart.splice(0, cart.length) : alert("Cart empty!");
         //Updates the cart
         showCart();
@@ -112,6 +118,9 @@ document.addEventListener('DOMContentLoaded', function () {
     
     // removes a single item from the cart by its index.
     function removeFromCart(index) {
+        let itemToRemove =cart[index];
+        cartPrice -= itemToRemove.getPrice();
+        console.log(itemToRemove.getName()+" removed from cart!");
         cart.splice(index, 1);
         // Updates the cart
         showCart();
@@ -140,7 +149,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     //adds an item to cart,if its not already added, and adds the price of the item to cartPrice.
-    window.addToCart = function(elem){
+    addToCart = function(elem){
         //Gets the obj on the product array by the id from the parent node
         let prodId = elem.parentNode.id;
         let name = products.find(the => the.name == prodId).name;
