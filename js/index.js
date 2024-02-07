@@ -96,6 +96,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const cartInfo = document.getElementById('cartInfo');
     const cartList = document.getElementById('cartList');
     const clearBtn = document.getElementById('clearButton');
+    const totalCartPrice = document.getElementById('totalCartPrice');
 
     //Shows the cart when the cart icon is clicked
     cartBtn.addEventListener('click', function () {
@@ -110,8 +111,9 @@ document.addEventListener('DOMContentLoaded', function () {
         //prints all the items to remove
         cart.forEach(item =>
             console.log(item.getName()+" removed from cart!"));
-        //checks if the cart is empty, if its not it removes all    
+        //checks if the cart is empty, if its not it removes all and set the cartprice to 0
         cart.length > 0 ? cart.splice(0, cart.length) : alert("Cart empty!");
+        cartPrice = 0;
         //Updates the cart
         showCart();
     });
@@ -128,6 +130,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Shows the products in the cart.
     function showCart() {
+        //updates the price of the cart.
+        totalCartPrice.textContent = `$${cartPrice}`;
+
         //cleans the cartList
         cartList.innerHTML = '';
 
