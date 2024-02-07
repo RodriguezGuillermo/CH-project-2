@@ -31,11 +31,15 @@ body header img {
   height: 3.5vw;
 }
 body header .cart-container {
+  z-index: 9999;
   position: fixed;
+  overflow-y: scroll;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  transform: translate(35vw, 5.5vw);
+  transform: translate(30vw, 10.5vw);
   border-radius: 25px;
   background-color: rgb(175, 174, 174);
+  width: 350px;
+  height: 15vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -62,13 +66,10 @@ body header .cart-container div button {
   border-color: white;
   padding: 5px;
 }
-body header .cart-container .cartLst {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: nowrap;
-  gap: 10px;
+body header .cart-container ul {
+  padding-left: 10px;
+  padding-right: 10px;
+  list-style-type: none;
 }
 body main {
   display: flex;

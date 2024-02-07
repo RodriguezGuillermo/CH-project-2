@@ -24,11 +24,15 @@ body{
             @include width-height(3.5vw,3.5vw);
         }
         .cart-container{
+            z-index: 9999;
             position: fixed;
+            overflow-y: scroll;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            transform: translate(35vw,5.5vw);
+            transform: translate(30vw,10.5vw);
             border-radius: 25px;
             background-color: rgb(175, 174, 174);
+            width: 350px;
+            height: 15vw;
             @include display-flex(column,center,center,nowrap,2px);
             display: none;
             div{
@@ -43,6 +47,11 @@ body{
                     border-color: white;
                     padding: 5px;
                 }
+            }
+            ul{
+                padding-left: 10px;
+                padding-right: 10px;
+                list-style-type: none;
             }
         }
     }
