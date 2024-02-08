@@ -75,7 +75,7 @@ class Item{
     }
 }
 
-//When clicks on cart icon shows all the items from the cart on the console
+//shows all the items from the cart on the console
 function showCartItems(){
     console.clear();
     if(cart.length>0){
@@ -98,13 +98,13 @@ document.addEventListener('DOMContentLoaded', function () {
     const clearBtn = document.getElementById('clearButton');
     const totalCartPrice = document.getElementById('totalCartPrice');
 
-    //Shows the cart when the cart icon is clicked
+    //Displays the cart when cart icon is clicked
     cartBtn.addEventListener('click', function () {
         cartInfo.style.display = (cartInfo.style.display === 'none' || cartInfo.style.display === '') ? 'block' : 'none';
         showCart();
     });
 
-    //Removes all items from cart
+    //Removes all items from cart and set cartPrice to 0
     clearBtn.addEventListener('click',function(){
         //clears thhe console
         window.console.clear();
@@ -118,7 +118,7 @@ document.addEventListener('DOMContentLoaded', function () {
         showCart();
     });
     
-    // removes a single item from the cart by its index.
+    // removes a single item from the cart by its index and substract its price from cartPrice.
     function removeFromCart(index) {
         let itemToRemove =cart[index];
         cartPrice -= itemToRemove.getPrice();
@@ -128,7 +128,7 @@ document.addEventListener('DOMContentLoaded', function () {
         showCart();
     }
 
-    // Shows the products in the cart.
+    // Shows the products in the cart display.
     function showCart() {
         //updates the price of the cart.
         totalCartPrice.textContent = `$${cartPrice}`;
