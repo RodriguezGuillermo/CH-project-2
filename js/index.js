@@ -2,6 +2,7 @@ let cartPrice = 0;
 let cart= [];
 const cartBtn = document.getElementById('cartBtn');
 const cartInfo = document.getElementById('cartInfo');
+const cartSpan = document.getElementById('cartLength');
 const cartList = document.getElementById('cartList');
 const clearBtn = document.getElementById('clearButton');
 const totalCartPrice = document.getElementById('totalCartPrice');
@@ -126,10 +127,11 @@ function showCart() {
         removeBtn.addEventListener('click', function () {
             removeFromCart(index);
         });
-
+        
         cartItem.appendChild(removeBtn);
         cartList.appendChild(cartItem);
     });
+    cartSpan.textContent = cart.length > 0 ? cart.length : "0";
 }
 
 //Displays the cart when cart icon is clicked

@@ -30,6 +30,19 @@ body header img {
   width: 3.5vw;
   height: 3.5vw;
 }
+body header span {
+  width: 1.3vw;
+  height: 1.3vw;
+  background-color: black;
+  transform: translate(30.5vw, -1.3vw);
+  border-radius: 100px;
+}
+body header span h6 {
+  z-index: 999;
+  color: white;
+  text-align: center;
+  font-weight: bolder;
+}
 body header .cart-container {
   z-index: 9999;
   position: fixed;

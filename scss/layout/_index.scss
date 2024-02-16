@@ -23,6 +23,18 @@ body{
             transform: translateX(35vw);
             @include width-height(3.5vw,3.5vw);
         }
+        span{
+            @include width-height(1.3vw,1.3vw);
+            background-color: black;
+            transform: translate(30.5vw,-1.3vw);
+            border-radius: 100px;
+            h6{
+                z-index: 999;
+                color: white;
+                text-align: center;
+                font-weight: bolder;
+            }
+        }
         .cart-container{
             z-index: 9999;
             position: fixed;
