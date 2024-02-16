@@ -12,9 +12,9 @@ let products =
     [
         //SNOWBOARDS
         //Burton brand
-        {name:'Burton Family Tree Grill Master',price:600},
-        {name:'Burton Mystery Hometown Hero',price:700},
-        {name:'Burton Throwback SB',price:500},
+        {name:'Burton Family Tree Grill Master',price:600 , img: '../images/Snowboards/Burton/burtonFamilyTreeGrillMaster.webp'},
+        {name:'Burton Mystery HometownHero',price:700 , img:'../images/Snowboards/Burton/burtonMysteryHometownHero.webp'},
+        {name:'Burton Throwback SB',price:500, img:'../images/Snowboards/Burton/burtonThrowbackSB.webp'},
         //Capita brand
         {name:'Capita Aeronaut',price:650},
         {name:'Capita DOA',price:800},
@@ -25,12 +25,12 @@ let products =
         {name:'Salomon Rumble Fish',price:750},
 
         //GOGGLES
-        {name:'Anon Helix',price:300},
-        {name:'Anon M4',price:350},
-        {name:'Anon M4s',price:325},
-        {name:'Anon Nesa',price:280},
-        {name:'Anon Sync',price:350},
-        {name:'Anon SyncL',price:300},
+        {name:'Anon Helix',price:300,img:'../images/Goggles/anonHelix.webp'},
+        {name:'Anon M4',price:350,img:'../images/Goggles/anonM4.webp'},
+        {name:'Anon M4s',price:325,img:'../images/Goggles/anonM4s.webp'},
+        {name:'Anon Nesa',price:280,img:'../images/Goggles/anonNesa.webp'},
+        {name:'Anon Sync',price:350,img:'../images/Goggles/anonSync.webp'},
+        {name:'Anon SyncL',price:300,img:'../images/Goggles/anonSyncLow.webp'},
 
         //BOOTS
         //Burton brand
@@ -47,12 +47,12 @@ let products =
         {name:'Salomon Launch',price:350},
 
         //HELMETS
-        {name:'Anon Echo',price:350},
-        {name:'Anon Merak',price:370},
-        {name:'Anon Merak Wavecel',price:325},
-        {name:'Anon Raider',price:380},
-        {name:'Anon Rime',price:300},
-        {name:'Anon Rodan',price:300},
+        {name:'Anon Echo',price:350,img:'../images/Helmets/anonEcho.webp'},
+        {name:'Anon Merak',price:370,img:'../images/Helmets/anonMerak.webp'},
+        {name:'Anon Merak Wavecel',price:325,img:'../images/Helmets/anonMerakWavecel.webp'},
+        {name:'Anon Raider',price:380,img:'../images/Helmets/anonRaider.webp'},
+        {name:'Anon Rime',price:300,img:'../images/Helmets/anonRime.webp'},
+        {name:'Anon Rodan',price:300,img:'../images/Helmets/anonRodan.webp'},
 
         //BINDINGS
         //Burton brand
@@ -155,11 +155,9 @@ clearBtn.addEventListener('click',function(){
 });
 
 //adds an item to cart,if its not already added, and adds the price of the item to cartPrice.
-buyButtons.forEach(button => button.addEventListener('click', function(event){
-    const buttonId = event.target.parentNode.id;
-
-    let name = products.find(the => the.name == buttonId).name;
-    let price = products.find(the => the.name == buttonId).price;
+function addToCart(productName){
+    let name = products.find(the => the.name == productName).name;
+    let price = products.find(the => the.name == productName).price;
 
     //if the item is already added, it doesnt adds it. otherwhise it does.
     if(cart.find(item=>item.getName() === name) === undefined || cart.length === 0){
@@ -173,7 +171,36 @@ buyButtons.forEach(button => button.addEventListener('click', function(event){
     }
     //update the cart
     showCart();
-}));
+}
+
+//Adds the cards with the product name, image and price to the HTML.
+function addCards(initialRange,finalRange,container){
+    for(let i = initialRange ; i <= finalRange; i++){
+        const card = document.createElement('div');
+        card.classList.add("card");
+        card.innerHTML = `
+                        <img src="${products[i].img}" class="card-img-top" alt="...">
+                            <div class="card-body" id="${products[i].name}">
+                            <h5 class="card-title">${products[i].name}</h5>
+                            <p class="card-text">$${products[i].price}USD</p>
+                            <a href="#" class="btn btn-primary" id="buyButton">Buy</a>
+                        </div>
+        `;
+        container.appendChild(card);
+        
+    }
+}
+
+//Event manager for "Buy" button 
+document.addEventListener('click', function(event) {
+    if (event.target && event.target.classList.contains('btn')) {
+        const productName = event.target.previousElementSibling.parentNode.id;
+        addToCart(productName);
+    }
+});
 
 
-
+const goggles = document.getElementById("goggles")
+addCards(9,14,goggles);
+const helmets = document.getElementById("helmets");
+addCards(24,29,helmets)

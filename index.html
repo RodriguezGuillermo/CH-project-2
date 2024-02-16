@@ -20,7 +20,7 @@
           <h3 id="totalCartPrice"></h3>
           <button id="clearButton">Clear</button>
         </div>
-        <ul id="cartList" class="carLst">
+        <ul id="cartList" class="cartLst">
         </ul>
     </div>
     </header>
@@ -40,7 +40,7 @@
                 <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
                 <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
               </div >
-              <div class="carousel-inner">
+              <div class="carousel-inner" id="burtonSnowboards">
                 <div class="carousel-item active">
                   <div class="card" >
                     <img src="./images/Snowboards/Burton/burtonFamilyTreeGrillMaster.webp" class="card-img-top" alt="...">
@@ -54,7 +54,7 @@
                 <div class="carousel-item">
                   <div class="card">
                     <img src="./images/Snowboards/Burton/burtonMysteryHometownHero.webp" class="card-img-top" alt="...">
-                    <div class="card-body" id="Burton Mystery Hometown Hero">
+                    <div class="card-body" id="Burton Mystery HometownHero">
                       <h5 class="card-title" >HomeTown</h5>
                       <p class="card-text" >$700USD</p>
                       <a href="#" class="btn btn-primary" id="buyButton">Buy</a>
@@ -188,55 +188,7 @@
 
       <section class="goggles">
         <h2>GOGGLES</h2>
-        <div class="brands">
-          <div class="card">
-            <img src="./images/Goggles/anonHelix.webp" class="card-img-top" alt="...">
-            <div class="card-body" id="Anon Helix">
-              <h5 class="card-title">Anon Helix</h5>
-              <p class="card-text">$300USD</p>
-              <a href="#" class="btn btn-primary" id="buyButton">Buy</a>
-            </div>
-          </div>
-          <div class="card">
-            <img src="./images/Goggles/anonM4.webp" class="card-img-top" alt="...">
-            <div class="card-body" id="Anon M4">
-              <h5 class="card-title">Anon M4</h5>
-              <p class="card-text">$350USD</p>
-              <a href="#" class="btn btn-primary" id="buyButton">Buy</a>
-            </div>
-          </div>
-          <div class="card">
-            <img src="./images/Goggles/anonM4s.webp" class="card-img-top" alt="...">
-            <div class="card-body" id="Anon M4s">
-              <h5 class="card-title">Anon M4s</h5>
-              <p class="card-text">$325USD</p>
-              <a href="#" class="btn btn-primary" id="buyButton">Buy</a>
-            </div>
-          </div>
-          <div class="card">
-            <img src="./images/Goggles/anonNesa.webp" class="card-img-top" alt="...">
-            <div class="card-body" id="Anon Nesa">
-              <h5 class="card-title">Anon Nesa</h5>
-              <p class="card-text">$280USD</p>
-              <a href="#" class="btn btn-primary" id="buyButton">Buy</a>
-            </div>
-          </div>
-          <div class="card">
-            <img src="./images/Goggles/anonSync.webp" class="card-img-top" alt="...">
-            <div class="card-body" id="Anon Sync">
-              <h5 class="card-title">Anon Sync</h5>
-              <p class="card-text">$350USD</p>
-              <a href="#" class="btn btn-primary" id="buyButton">Buy</a>
-            </div>
-          </div>
-          <div class="card">
-            <img src="./images/Goggles/anonSyncLow.webp" class="card-img-top" alt="...">
-            <div class="card-body" id="Anon SyncL">
-              <h5 class="card-title">Anon SyncL</h5>
-              <p class="card-text">$300USD</p>
-              <a href="#" class="btn btn-primary" id="buyButton">Buy</a>
-            </div>
-          </div>
+        <div class="brands" id="goggles">
         </div>
       </section>
 
@@ -398,55 +350,7 @@
 
       <section class="helmets">
         <h2>HELMETS</h2>
-        <div class="brands">
-          <div class="card">
-            <img src="./images/Helmets/anonEcho.webp" class="card-img-top" alt="...">
-            <div class="card-body" id="Anon Echo">
-              <h5 class="card-title">Anon Echo</h5>
-              <p class="card-text">$350USD</p>
-              <a href="#" class="btn btn-primary" id="buyButton">Buy</a>
-            </div>
-          </div>
-          <div class="card">
-            <img src="./images/Helmets/anonMerak.webp" class="card-img-top" alt="...">
-            <div class="card-body" id="Anon Merak">
-              <h5 class="card-title">Anon Merak</h5>
-              <p class="card-text">$370USD</p>
-              <a href="#" class="btn btn-primary" id="buyButton">Buy</a>
-            </div>
-          </div>
-          <div class="card">
-            <img src="./images/Helmets/anonMerakWavecel.webp" class="card-img-top" alt="...">
-            <div class="card-body" id="Anon Merak Wavecel">
-              <h5 class="card-title">Anon MW</h5>
-              <p class="card-text">$325USD</p>
-              <a href="#" class="btn btn-primary" id="buyButton">Buy</a>
-            </div>
-          </div>
-          <div class="card">
-            <img src="./images/Helmets/anonRaider.webp" class="card-img-top" alt="...">
-            <div class="card-body" id="Anon Raider">
-              <h5 class="card-title">Anon Raider</h5>
-              <p class="card-text">$380USD</p>
-              <a href="#" class="btn btn-primary" id="buyButton">Buy</a>
-            </div>
-          </div>
-          <div class="card">
-            <img src="./images/Helmets/anonRime.webp" class="card-img-top" alt="...">
-            <div class="card-body" id="Anon Rime">
-              <h5 class="card-title">Anon Rime</h5>
-              <p class="card-text">$300USD</p>
-              <a href="#" class="btn btn-primary" id="buyButton">Buy</a>
-            </div>
-          </div>
-          <div class="card">
-            <img src="./images/Helmets/anonRodan.webp" class="card-img-top" alt="...">
-            <div class="card-body" id="Anon Rodan">
-              <h5 class="card-title">Anon Rodan</h5>
-              <p class="card-text">$300USD</p>
-              <a href="#" class="btn btn-primary" id="buyButton">Buy</a>
-            </div>
-          </div>
+        <div class="brands" id="helmets">
         </div>
       </section>
 

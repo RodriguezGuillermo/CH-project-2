@@ -90,11 +90,16 @@ body header .cart-container ul {
 body header .cart-container ul li {
   display: flex;
   flex-direction: row;
+  border-style: groove;
+  border-width: 2px;
+  border-radius: 25px;
+  border-color: black;
+  padding: 5px;
 }
 body header .cart-container ul li button {
   position: absolute;
   right: 0;
-  transform: translateX(-10px);
+  transform: translate(-20px, -2px);
   border-radius: 100px;
   font-weight: bolder;
   background-color: rgb(200, 102, 102);
