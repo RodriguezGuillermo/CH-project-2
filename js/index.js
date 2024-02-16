@@ -6,7 +6,6 @@ const cartSpan = document.getElementById('cartLength');
 const cartList = document.getElementById('cartList');
 const clearBtn = document.getElementById('clearButton');
 const totalCartPrice = document.getElementById('totalCartPrice');
-const buyButtons = document.querySelectorAll('.btn');
 
 let products = 
     [
@@ -16,13 +15,13 @@ let products =
         {name:'Burton Mystery HometownHero',price:700 , img:'../images/Snowboards/Burton/burtonMysteryHometownHero.webp'},
         {name:'Burton Throwback SB',price:500, img:'../images/Snowboards/Burton/burtonThrowbackSB.webp'},
         //Capita brand
-        {name:'Capita Aeronaut',price:650},
-        {name:'Capita DOA',price:800},
-        {name:'Capita Paradise',price:550},
+        {name:'Capita Aeronaut',price:650, img: '../images/Snowboards/Capita/capitaAeronaut.webp'},
+        {name:'Capita DOA',price:800, img: '../images/Snowboards/Capita/capitaDOA.webp'},
+        {name:'Capita Paradise',price:550, img: '../images/Snowboards/Capita/capitaParadise.webp'},
         //Salomon brand
-        {name:'Salomon Assasin',price:750},
-        {name:'Salomon Assasin Pro',price:800},
-        {name:'Salomon Rumble Fish',price:750},
+        {name:'Salomon Assasin',price:750, img: '../images/Snowboards/Salomon/salomonAssasin.webp'},
+        {name:'Salomon Assasin Pro',price:800, img: '../images/Snowboards/Salomon/salomonAssasinPro.webp'},
+        {name:'Salomon Rumble Fish',price:750, img: '../images/Snowboards/Salomon/salomonRumbleFish.webp'},
 
         //GOGGLES
         {name:'Anon Helix',price:300,img:'../images/Goggles/anonHelix.webp'},
@@ -34,17 +33,17 @@ let products =
 
         //BOOTS
         //Burton brand
-        {name:'Burton Ion StepOn',price:300},
-        {name:'Burton Photon StepOn',price:350},
-        {name:'Burton Swath StepOn',price:290},
+        {name:'Burton Ion StepOn',price:300, img: '../images/Boots/Burton/burtonIonStepOn.webp'},
+        {name:'Burton Photon StepOn',price:350, img: '../images/Boots/Burton/burtonPhotonStepOn.webp'},
+        {name:'Burton Swath StepOn',price:290, img: '../images/Boots/Burton/burtonSwathStepOn.webp'},
         //DC brand
-        {name:'DC Judge StepOn',price:350},
-        {name:'DC PhasePro StepOn',price:350},
-        {name:'DC Premier Hybrid',price:300},
+        {name:'DC Judge StepOn',price:350, img: '../images/Boots/DC/dcJudgeStepOn.jpg'},
+        {name:'DC PhasePro StepOn',price:350, img: '../images/Boots/DC/dcPhaseProStepOn.jpg'},
+        {name:'DC Premier Hybrid',price:300, img: '../images/Boots/DC/dcPremierHybrid.jpg'},
         //Salomon brand
-        {name:'Salomon Dialogue',price:250},
-        {name:'Salomon Dialogue Dual',price:300},
-        {name:'Salomon Launch',price:350},
+        {name:'Salomon Dialogue',price:250, img: '../images/Boots/Salomon/salomonDialogue.webp'},
+        {name:'Salomon Dialogue Dual',price:300, img: '../images/Boots/Salomon/salomonDialogueDual.webp'},
+        {name:'Salomon Launch',price:350, img: '../images/Boots/Salomon/salomonLaunch.webp'},
 
         //HELMETS
         {name:'Anon Echo',price:350,img:'../images/Helmets/anonEcho.webp'},
@@ -56,16 +55,16 @@ let products =
 
         //BINDINGS
         //Burton brand
-        {name:'Burton MissionRe',price:250},
-        {name:'Burton StepOn Genesis',price:300},
-        {name:'Burton StepOn Re',price:290},
+        {name:'Burton MissionRe',price:250, img: '../images/Bindings/Burton/burtonMissionRe.webp'},
+        {name:'Burton StepOn Genesis',price:300, img: '../images/Bindings/Burton/burtonStepOnGenesis.webp'},
+        {name:'Burton StepOn Re',price:290, img: '../images/Bindings/Burton/burtonStepOnRe.webp'},
         //Clew brand
-        {name:'Clew Freedom Black',price:200},
-        {name:'Clew Freedom White',price:220},
+        {name:'Clew Freedom Black',price:200, img: '../images/Bindings/Clew/clewFreedomBlack.webp'},
+        {name:'Clew Freedom White',price:220, img: '../images/Bindings/Clew/clewFreedomWhite.webp'},
         //Salomon brand
-        {name:'Salomon District',price:250},
-        {name:'Salomon Mirage',price:300},
-        {name:'Salomon Rhythm',price:300},
+        {name:'Salomon District',price:250, img: '../images/Bindings/Salomon/salomonDistrict.webp'},
+        {name:'Salomon Mirage',price:300, img: '../images/Bindings/Salomon/salomonMirage.webp'},
+        {name:'Salomon Rhythm',price:300, img: '../images/Bindings/Salomon/salomonRhythm.webp'},
     ]
 ;
 
@@ -173,7 +172,15 @@ function addToCart(productName){
     showCart();
 }
 
-//Adds the cards with the product name, image and price to the HTML.
+//Event manager for "Buy" button 
+document.addEventListener('click', function(event) {
+    if (event.target && event.target.classList.contains('btn')) {
+        const productName = event.target.previousElementSibling.parentNode.id;
+        addToCart(productName);
+    }
+});
+
+//Adds the cards with the product name, image and price to the DOM.
 function addCards(initialRange,finalRange,container){
     for(let i = initialRange ; i <= finalRange; i++){
         const card = document.createElement('div');
@@ -191,16 +198,67 @@ function addCards(initialRange,finalRange,container){
     }
 }
 
-//Event manager for "Buy" button 
-document.addEventListener('click', function(event) {
-    if (event.target && event.target.classList.contains('btn')) {
-        const productName = event.target.previousElementSibling.parentNode.id;
-        addToCart(productName);
-    }
-});
-
-
-const goggles = document.getElementById("goggles")
+const goggles = document.getElementById("goggles");
 addCards(9,14,goggles);
 const helmets = document.getElementById("helmets");
-addCards(24,29,helmets)
+addCards(24,29,helmets);
+
+function addCardsToCarousel(initialRange,finalRange,container){
+    let i = initialRange;
+    const card = document.createElement('div');
+    card.classList.add('carousel-item', 'active');
+    card.innerHTML = `
+                        <div class="card" >
+                            <img src="${products[i].img}" class="card-img-top" alt="...">
+                            <div class="card-body" id="${products[i].name}">
+                                <h5 class="card-title">${products[i].name}</h5>
+                                <p class="card-text" >$${products[i].price}USD</p>
+                                <a href="#" class="btn btn-primary" id="buyButton">Buy</a>
+                            </div>
+                        </div>
+    `;
+    i++;
+    container.appendChild(card);
+    for(i ; i<=finalRange;i++){
+        const card = document.createElement('div');
+        card.classList.add("carousel-item");
+        card.innerHTML = `
+                            <div class="card" >
+                                <img src="${products[i].img}" class="card-img-top" alt="...">
+                                <div class="card-body" id="${products[i].name}">
+                                    <h5 class="card-title">${products[i].name}</h5>
+                                    <p class="card-text" >$${products[i].price}USD</p>
+                                    <a href="#" class="btn btn-primary" id="buyButton">Buy</a>
+                                </div>
+                            </div>
+        `;
+        container.appendChild(card);
+    }
+}
+
+const burtonSB = document.getElementById("burtonSnowboards");
+addCardsToCarousel(0,2,burtonSB);
+
+const capitaSB = document.getElementById("capitaSnowboards");
+addCardsToCarousel(3,5,capitaSB);
+
+const salomonSB = document.getElementById("salomonSnowboards");
+addCardsToCarousel(6,8,salomonSB);
+
+const burtonB = document.getElementById("burtonBoots");
+addCardsToCarousel(15,17,burtonB);
+
+const dcB = document.getElementById("dcBoots");
+addCardsToCarousel(18,20,dcB);
+
+const salomonB = document.getElementById("salomonBoots");
+addCardsToCarousel(21,23,salomonB);
+
+const burtonBi = document.getElementById("burtonBi");
+addCardsToCarousel(30,32,burtonBi);
+
+const clewBi = document.getElementById("clewBi");
+addCardsToCarousel(33,34,clewBi);
+
+const salomonBi = document.getElementById("salomonBi");
+addCardsToCarousel(35,37,salomonBi);
