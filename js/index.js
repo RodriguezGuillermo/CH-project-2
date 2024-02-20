@@ -198,11 +198,7 @@ function addCards(initialRange,finalRange,container){
     }
 }
 
-const goggles = document.getElementById("goggles");
-addCards(9,14,goggles);
-const helmets = document.getElementById("helmets");
-addCards(24,29,helmets);
-
+//Adds the cards with the product name, image and price to the carrousel on the DOM.
 function addCardsToCarousel(initialRange,finalRange,container){
     let i = initialRange;
     const card = document.createElement('div');
@@ -236,29 +232,34 @@ function addCardsToCarousel(initialRange,finalRange,container){
     }
 }
 
+//Adding the snowboard cards to the snowboards carrousel
 const burtonSB = document.getElementById("burtonSnowboards");
 addCardsToCarousel(0,2,burtonSB);
-
 const capitaSB = document.getElementById("capitaSnowboards");
 addCardsToCarousel(3,5,capitaSB);
-
 const salomonSB = document.getElementById("salomonSnowboards");
 addCardsToCarousel(6,8,salomonSB);
 
+//Adding the goggles cards
+const goggles = document.getElementById("goggles");
+addCards(9,14,goggles);
+
+//Adding the boots cards to the boots carrousel
 const burtonB = document.getElementById("burtonBoots");
 addCardsToCarousel(15,17,burtonB);
-
 const dcB = document.getElementById("dcBoots");
 addCardsToCarousel(18,20,dcB);
-
 const salomonB = document.getElementById("salomonBoots");
 addCardsToCarousel(21,23,salomonB);
 
+//Adding the helmets cards.
+const helmets = document.getElementById("helmets");
+addCards(24,29,helmets);
+
+//Adding the bindings cards to the bindings carrousel
 const burtonBi = document.getElementById("burtonBi");
 addCardsToCarousel(30,32,burtonBi);
-
 const clewBi = document.getElementById("clewBi");
 addCardsToCarousel(33,34,clewBi);
-
 const salomonBi = document.getElementById("salomonBi");
 addCardsToCarousel(35,37,salomonBi);

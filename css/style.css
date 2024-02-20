@@ -470,6 +470,56 @@ body footer div h6 a {
   color: orange;
 }
 
+.login {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 0px;
+  transform: translate(24vw, 15vw);
+  border: 5px solid;
+  border-radius: 100px;
+  border-width: 10px;
+  border-color: rgb(108, 107, 107);
+  width: 50vw;
+  backdrop-filter: blur(10px);
+}
+.login h2 {
+  font-size: 3vw;
+}
+.login #loginForm {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 10px;
+}
+.login #loginForm .userInput {
+  text-align: center;
+}
+.login #loginForm .userInput input {
+  letter-spacing: 3px;
+  font-weight: bolder;
+  font-size: large;
+  text-align: center;
+  width: 300px;
+  height: 25px;
+}
+.login #loginForm .buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 10px;
+}
+.login #loginForm .buttons button {
+  font-size: 1.5vw;
+}
+
 @media only screen and (max-width: 1399.99px) {
   body main .snowboards .brands .burtonSB .carousel .carousel-control-next, body main .snowboards .brands .burtonSB .carousel .carousel-control-prev, body main .snowboards .brands .salomonSB .carousel .carousel-control-next, body main .snowboards .brands .salomonSB .carousel .carousel-control-prev, body main .snowboards .brands .capitaSB .carousel .carousel-control-next, body main .snowboards .brands .capitaSB .carousel .carousel-control-prev {
     height: 16vw;
