@@ -11,6 +11,22 @@ body{
     background: linear-gradient(to left,rgb(43, 187, 43) ,blue ,rgb(60, 60, 60));
     @include display-flex(row,center,center,nowrap,10px);
     
+        p{
+            background-color: grey;
+            border-radius: 100px;
+            border-color: black;
+            border-width: 3px;
+            border-style: groove;
+            padding: 5px;
+            font-size: 1.5vw;
+            color: white;
+            position: fixed;
+            bottom: 0;
+            right:0;
+            transform: translateY(5vw);
+            transition: bottom 1s ease;
+            z-index: 9999;
+        }
         h1{
             text-align: center;
             font-size: 4vw;
@@ -20,13 +36,15 @@ body{
             background-color: white;
             border-radius: 10px;
             padding: 5px;
-            transform: translateX(35vw);
+            transform: translateX(40vw);
             @include width-height(3.5vw,3.5vw);
+            position: fixed;
         }
         span{
+            position: fixed;
             @include width-height(1.3vw,1.3vw);
             background-color: black;
-            transform: translate(30.5vw,-1.3vw);
+            transform: translate(38.5vw,-1.3vw);
             border-radius: 100px;
             h6{
                 z-index: 999;

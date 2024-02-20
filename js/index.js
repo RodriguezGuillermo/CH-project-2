@@ -6,6 +6,7 @@ const cartSpan = document.getElementById('cartLength');
 const cartList = document.getElementById('cartList');
 const clearBtn = document.getElementById('clearButton');
 const totalCartPrice = document.getElementById('totalCartPrice');
+const msg = document.getElementById("message");
 
 let products = 
     [
@@ -81,16 +82,13 @@ class Item{
     }
 }
 
-//shows all the items from the cart on the console
+//shows all the items from the cart on the console --- BORRAR DESPUES DE ENTREGA 3
 function showCartItems(){
     console.clear();
     if(cart.length>0){
-        alert("You have "+cart.length + " item/s in your cart. Check the console for more info");
-        console.log("-----ITEMS LIST-----");
         for(const items of cart){
             console.log(items.getName());
         }
-        console.log("---ENDS OF ITEMS LIST---");
     }
     else{
         console.log("Your cart is empty!");
@@ -101,7 +99,7 @@ function showCartItems(){
 function removeFromCart(index) {
     let itemToRemove =cart[index];
     cartPrice -= itemToRemove.getPrice();
-    console.log(itemToRemove.getName()+" removed from cart!");
+    showMessage(itemToRemove.getName(),2)
     cart.splice(index, 1);
     // Updates the cart
     showCart();
@@ -141,13 +139,9 @@ cartBtn.addEventListener('click', function () {
 
 //Removes all items from cart and set cartPrice to 0
 clearBtn.addEventListener('click',function(){
-    //clears thhe console
-    window.console.clear();
-    //prints all the items to remove
-    cart.forEach(item =>
-        console.log(item.getName()+" removed from cart!"));
     //checks if the cart is empty, if its not it removes all and set the cartprice to 0
-    cart.length > 0 ? cart.splice(0, cart.length) : alert("Cart empty!");
+    cart.length > 0 ? cart.splice(0, cart.length) : '';
+    showMessage('',3)
     cartPrice = 0;
     //Updates the cart
     showCart();
@@ -162,21 +156,43 @@ function addToCart(productName){
     if(cart.find(item=>item.getName() === name) === undefined || cart.length === 0){
         cart.push(new Item(name,price));
         cartPrice+= price;
-        console.log(name+" added to cart.\nYour cart price is: "+cartPrice+" \n-------------------------");
     }
     else{
-        alert(name+" already added to cart!");
-        console.log(name+" already added to cart!");
+        showMessage(name,1);
     }
     //update the cart
     showCart();
 }
 
+function showMessage(name,type){
+    msg.style.display = 'block';
+    switch(type){
+        case 1:
+            msg.textContent = name+' already added to cart!';
+            break;
+        case 2:
+            msg.textContent = name+' deleted from cart!';
+            break;
+        case 3:
+            msg.textContent = 'Cart Empty';
+            break;
+    }
+
+    setTimeout(()=>{ msg.style.bottom = '5vw';},0);
+   
+    
+    setTimeout(()=>{
+        msg.textContent = '';
+        msg.style.display = 'none';
+        msg.style.bottom = '-5vw';
+    },1500);
+    
+}
+
 //Event manager for "Buy" button 
 document.addEventListener('click', function(event) {
     if (event.target && event.target.classList.contains('btn')) {
-        const productName = event.target.previousElementSibling.parentNode.id;
-        addToCart(productName);
+        addToCart(event.target.previousElementSibling.parentNode.id);
     }
 });
 
@@ -190,7 +206,7 @@ function addCards(initialRange,finalRange,container){
                             <div class="card-body" id="${products[i].name}">
                             <h5 class="card-title">${products[i].name}</h5>
                             <p class="card-text">$${products[i].price}USD</p>
-                            <a href="#" class="btn btn-primary" id="buyButton">Buy</a>
+                            <button href="#" class="btn btn-primary" id="buyButton">Buy</button>
                         </div>
         `;
         container.appendChild(card);
@@ -209,7 +225,7 @@ function addCardsToCarousel(initialRange,finalRange,container){
                             <div class="card-body" id="${products[i].name}">
                                 <h5 class="card-title">${products[i].name}</h5>
                                 <p class="card-text" >$${products[i].price}USD</p>
-                                <a href="#" class="btn btn-primary" id="buyButton">Buy</a>
+                                <button href="#" class="btn btn-primary" id="buyButton">Buy</button>
                             </div>
                         </div>
     `;
@@ -224,7 +240,7 @@ function addCardsToCarousel(initialRange,finalRange,container){
                                 <div class="card-body" id="${products[i].name}">
                                     <h5 class="card-title">${products[i].name}</h5>
                                     <p class="card-text" >$${products[i].price}USD</p>
-                                    <a href="#" class="btn btn-primary" id="buyButton">Buy</a>
+                                    <button href="#" class="btn btn-primary" id="buyButton">Buy</button>
                                 </div>
                             </div>
         `;
@@ -263,3 +279,5 @@ const clewBi = document.getElementById("clewBi");
 addCardsToCarousel(33,34,clewBi);
 const salomonBi = document.getElementById("salomonBi");
 addCardsToCarousel(35,37,salomonBi);
+
+msg.style.display = 'none';

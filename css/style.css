@@ -17,6 +17,22 @@ body header {
   flex-wrap: nowrap;
   gap: 10px;
 }
+body header p {
+  background-color: grey;
+  border-radius: 100px;
+  border-color: black;
+  border-width: 3px;
+  border-style: groove;
+  padding: 5px;
+  font-size: 1.5vw;
+  color: white;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  transform: translateY(5vw);
+  transition: bottom 1s ease;
+  z-index: 9999;
+}
 body header h1 {
   text-align: center;
   font-size: 4vw;
@@ -26,15 +42,17 @@ body header img {
   background-color: white;
   border-radius: 10px;
   padding: 5px;
-  transform: translateX(35vw);
+  transform: translateX(40vw);
   width: 3.5vw;
   height: 3.5vw;
+  position: fixed;
 }
 body header span {
+  position: fixed;
   width: 1.3vw;
   height: 1.3vw;
   background-color: black;
-  transform: translate(30.5vw, -1.3vw);
+  transform: translate(38.5vw, -1.3vw);
   border-radius: 100px;
 }
 body header span h6 {
