@@ -67,7 +67,10 @@ body header {
   flex-wrap: nowrap;
   gap: 10px;
 }
-body header p {
+body header #messageDiv {
+  position: absolute;
+}
+body header #messageDiv #message {
   background-color: grey;
   border-radius: 100px;
   border-color: black;
@@ -77,11 +80,12 @@ body header p {
   font-size: 1.5vw;
   color: white;
   position: fixed;
+  text-align: center;
   bottom: 0;
   right: 0;
   transform: translateY(5vw);
   transition: bottom 1s ease;
-  z-index: 999;
+  z-index: 9;
 }
 body header #checkOutMessage {
   position: fixed;
@@ -285,8 +289,13 @@ body main .snowboards .brands .burtonSB .carousel .carousel-indicators, body mai
 body main .snowboards .brands .burtonSB .carousel .carousel-inner, body main .snowboards .brands .salomonSB .carousel .carousel-inner, body main .snowboards .brands .capitaSB .carousel .carousel-inner {
   width: 15vw;
   height: 25vw;
+  position: relative;
+}
+body main .snowboards .brands .burtonSB .carousel .carousel-inner .carousel-item, body main .snowboards .brands .salomonSB .carousel .carousel-inner .carousel-item, body main .snowboards .brands .capitaSB .carousel .carousel-inner .carousel-item {
+  position: relative;
 }
 body main .snowboards .brands .burtonSB .carousel .carousel-inner .carousel-item .card, body main .snowboards .brands .salomonSB .carousel .carousel-inner .carousel-item .card, body main .snowboards .brands .capitaSB .carousel .carousel-inner .carousel-item .card {
+  position: relative;
   width: auto;
   height: 25vw;
   border-radius: 25px;
@@ -531,6 +540,7 @@ body main .goggles .brands, body main .helmets .brands {
   flex-direction: row;
 }
 body main .goggles .brands .card, body main .helmets .brands .card {
+  z-index: 0;
   border-radius: 25px;
   gap: 10px;
   width: 10vw;

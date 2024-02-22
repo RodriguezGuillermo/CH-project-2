@@ -177,31 +177,43 @@ function addToCart(productName){
 
 //Show the massage on a 'p' element when you clicl a certain button
 function showMessage(name,type){
-    msg.style.display = 'block';
+    const message = document.createElement('p');
+    message.id = 'message';
+    message.style.display = 'block'
+
     switch(type){
         case 1:
-            msg.textContent = name+' already added to cart!';
+            message.textContent = name+' already added to cart!';
+            message.style.left = '10px';
+            message.style.maxWidth = '40vw'
             break;
         case 2:
-            msg.textContent = name+' deleted from cart!';
+            message.textContent = name+' deleted from cart!';
+            message.style.left = '400px';
+            message.style.maxWidth = '40vw'
             break;
         case 3:
-            msg.textContent = 'Cart Empty';
+            message.textContent = 'Cart Empty';
+            message.style.left = '1000px';
+            message.style.maxWidth = '10vw'
             break;
         case 4: 
-            msg.textContent = 'Your cart is empty!'
+        message.textContent = 'Your cart is empty!'
+            message.style.left = '1400px';
+            message.style.maxWidth = '15vw'
             break;
     }
-
-    setTimeout(()=>{ msg.style.bottom = '5vw';},0);
+    document.getElementById('messageDiv').append(message);
+    setTimeout(()=>{ message.style.bottom = '5vw';},0);
    
     
     setTimeout(()=>{
-        msg.textContent = '';
-        msg.style.display = 'none';
-        msg.style.bottom = '-5vw';
+        message.style.bottom = '-5vw';
     },1500);
-    
+
+    setTimeout(()=> {message.textContent = '';
+    message.style.display = 'none';},2000);
+       
 }
 
 //Event manager for "Buy" button 
@@ -267,8 +279,7 @@ function addCardsToCarousel(initialRange,finalRange,container){
 checkOutBtn.addEventListener('click',()=>{
     //creates the checking out message
     if(cart.length>0){
-        checkOutBtn.disabled = true;
-        clearBtn.disabled = true;
+        disableButtons(true);
         //hacer funcion para desabilitar todos los botones
         document.getElementById('titleContent').textContent = "Do you want to checkOut?"
         
@@ -291,11 +302,17 @@ confirmCheckOut.addEventListener('click',()=>{
 cancelCheckOut.addEventListener('click',()=>{
     checkOutMsg.style.top = '-40vw';
     setTimeout(()=>{
-        checkOutBtn.disabled = false;
-        clearBtn.disabled = false;
+        disableButtons(false);
         document.getElementById('titleContent').textContent = '';},1000)
     
 });
+
+function disableButtons(bool){
+    checkOutBtn.disabled = bool;
+    clearBtn.disabled = bool;
+    cartBtn.disabled = bool;
+    document.getElementById('buyButton').disabled = bool;
+}
 
 //Adding the snowboard cards to the snowboards carrousel
 const burtonSB = document.getElementById("burtonSnowboards");
@@ -331,5 +348,4 @@ addCardsToCarousel(35,37,salomonBi);
 
 //set messages on hidden display
 checkOutMsg.style.top = '-20vw';
-msg.style.display = 'none';
 
