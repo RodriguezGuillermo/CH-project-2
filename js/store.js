@@ -11,7 +11,7 @@ const checkOutBtn = document.getElementById('checkOutButton');
 const checkOutMsg = document.getElementById('checkOutMessage');
 const confirmCheckOut = document.getElementById('confirmButton');
 const cancelCheckOut = document.getElementById('cancelButton');
-
+const screenBloquer = document.getElementById('screenBloquer');
 
 let products = 
     [
@@ -279,7 +279,7 @@ function addCardsToCarousel(initialRange,finalRange,container){
 checkOutBtn.addEventListener('click',()=>{
     //creates the checking out message
     if(cart.length>0){
-        disableButtons(true);
+        screenBloquer.style.display = 'block';
         //hacer funcion para desabilitar todos los botones
         document.getElementById('titleContent').textContent = "Do you want to checkOut?"
         
@@ -294,6 +294,7 @@ checkOutBtn.addEventListener('click',()=>{
 confirmCheckOut.addEventListener('click',()=>{
     localStorage.clear();
     cart.splice(0,cart.length);
+    screenBloquer.style.display = 'none';
     updateCart();
     window.location.href = '../index.html';
 });
@@ -302,17 +303,10 @@ confirmCheckOut.addEventListener('click',()=>{
 cancelCheckOut.addEventListener('click',()=>{
     checkOutMsg.style.top = '-40vw';
     setTimeout(()=>{
-        disableButtons(false);
+        screenBloquer.style.display = 'none';
         document.getElementById('titleContent').textContent = '';},1000)
     
 });
-
-function disableButtons(bool){
-    checkOutBtn.disabled = bool;
-    clearBtn.disabled = bool;
-    cartBtn.disabled = bool;
-    document.getElementById('buyButton').disabled = bool;
-}
 
 //Adding the snowboard cards to the snowboards carrousel
 const burtonSB = document.getElementById("burtonSnowboards");

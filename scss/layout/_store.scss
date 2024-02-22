@@ -10,7 +10,18 @@ body{
     border-bottom-right-radius: 50px;
     background: linear-gradient(to left,rgb(43, 187, 43) ,blue ,rgb(60, 60, 60));
     @include display-flex(row,center,center,nowrap,10px);
-    
+
+        #screenBloquer{
+            position: fixed;  
+            top: 0;  
+            left: 0;  
+            width: 100%;  
+            height: 100%;  
+            z-index: 9998; 
+            background-color: rgba(0, 0, 0, 0.5); 
+            backdrop-filter: blur(10px);
+            display: none;
+        }
         #messageDiv{
             position: absolute;
             #message{
@@ -91,7 +102,7 @@ body{
             }
         }
         .cart-container{
-            z-index: 9999;
+            z-index: 9997;
             position: fixed;
             overflow-y: scroll;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
