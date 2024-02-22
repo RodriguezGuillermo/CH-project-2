@@ -263,6 +263,40 @@ function addCardsToCarousel(initialRange,finalRange,container){
     }
 }
 
+//displays a checking out message.
+checkOutBtn.addEventListener('click',()=>{
+    //creates the checking out message
+    if(cart.length>0){
+        checkOutBtn.disabled = true;
+        clearBtn.disabled = true;
+        //hacer funcion para desabilitar todos los botones
+        document.getElementById('titleContent').textContent = "Do you want to checkOut?"
+        
+        checkOutMsg.style.top = '25vw';
+    }
+    else{
+        showMessage('',4);
+    }
+});
+
+//when clicked, deletes localStorage, empty cart and redirects to login.
+confirmCheckOut.addEventListener('click',()=>{
+    localStorage.clear();
+    cart.splice(0,cart.length);
+    updateCart();
+    window.location.href = '../index.html';
+});
+
+//when clicled removes checkout message
+cancelCheckOut.addEventListener('click',()=>{
+    checkOutMsg.style.top = '-40vw';
+    setTimeout(()=>{
+        checkOutBtn.disabled = false;
+        clearBtn.disabled = false;
+        document.getElementById('titleContent').textContent = '';},1000)
+    
+});
+
 //Adding the snowboard cards to the snowboards carrousel
 const burtonSB = document.getElementById("burtonSnowboards");
 addCardsToCarousel(0,2,burtonSB);

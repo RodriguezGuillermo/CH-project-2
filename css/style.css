@@ -81,7 +81,7 @@ body header p {
   right: 0;
   transform: translateY(5vw);
   transition: bottom 1s ease;
-  z-index: 9999;
+  z-index: 999;
 }
 body header #checkOutMessage {
   position: fixed;
