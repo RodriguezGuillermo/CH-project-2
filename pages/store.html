@@ -10,6 +10,15 @@
   <body>
     <header>
       <p id="message"></p>
+      <div id="checkOutMessage">
+        <div class="content">
+          <div id="titleContent"></div>
+        </div>
+        <div class="btns">
+          <button id='confirmButton'>Confirm</button>
+          <button id='cancelButton'>Cancel</button> 
+      </div>
+      </div>
       <h1>
         CarveIn
       </h1>
@@ -19,7 +28,11 @@
         <div>
           <h3>My Cart</h3>
           <h3 id="totalCartPrice"></h3>
-          <button id="clearButton">Clear</button>
+          <div class="buttons">
+            <button id="clearButton">Clear</button>
+            <button id="checkOutButton">CheckOut</button>
+          </div>
+          
         </div>
         <ul id="cartList" class="cartLst">
         </ul>

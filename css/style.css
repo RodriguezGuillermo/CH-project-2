@@ -1,3 +1,53 @@
+.login {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 0px;
+  transform: translate(24vw, 15vw);
+  border: 5px solid;
+  border-radius: 100px;
+  border-width: 10px;
+  border-color: rgb(108, 107, 107);
+  width: 50vw;
+  backdrop-filter: blur(10px);
+}
+.login h2 {
+  font-size: 3vw;
+}
+.login #loginForm {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 10px;
+}
+.login #loginForm .userInput {
+  text-align: center;
+}
+.login #loginForm .userInput input {
+  letter-spacing: 3px;
+  font-weight: bolder;
+  font-size: large;
+  text-align: center;
+  width: 300px;
+  height: 25px;
+}
+.login #loginForm .buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 10px;
+}
+.login #loginForm .buttons button {
+  font-size: 1.5vw;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -32,6 +82,37 @@ body header p {
   transform: translateY(5vw);
   transition: bottom 1s ease;
   z-index: 9999;
+}
+body header #checkOutMessage {
+  position: fixed;
+  z-index: 9999;
+  background-color: white;
+  width: 600px;
+  height: 150px;
+  background-color: rgb(134, 212, 136);
+  border-radius: 25px;
+  border-color: black;
+  border-width: 2.5px;
+  border-style: groove;
+  transition: top 1s ease;
+}
+body header #checkOutMessage .content {
+  position: relative;
+  text-align: center;
+  color: rgb(0, 0, 0);
+  font-weight: bolder;
+  font-size: 2vw;
+}
+body header #checkOutMessage .btns {
+  position: relative;
+  transform: translateY(2vw);
+  text-align: center;
+}
+body header #checkOutMessage .btns button {
+  border-radius: 100px;
+  width: 100px;
+  height: 30px;
+  margin: 20px;
 }
 body header h1 {
   text-align: center;
@@ -69,7 +150,7 @@ body header .cart-container {
   transform: translate(30vw, 10.5vw);
   border-radius: 25px;
   background-color: rgb(175, 174, 174);
-  width: 350px;
+  width: 450px;
   height: 15vw;
   display: flex;
   flex-direction: column;
@@ -88,7 +169,13 @@ body header .cart-container div {
   gap: 10px;
   padding: 10px;
 }
-body header .cart-container div button {
+body header .cart-container div .buttons {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  transform: translateX(15px);
+}
+body header .cart-container div .buttons button {
   border-radius: 10px;
   border-style: groove;
   background-color: black;
@@ -96,6 +183,12 @@ body header .cart-container div button {
   font-weight: bolder;
   border-color: white;
   padding: 5px;
+}
+body header .cart-container div .buttons #clearButton {
+  transform: translateX(20px);
+}
+body header .cart-container div .buttons #checkOutButton {
+  background-color: green;
 }
 body header .cart-container ul {
   padding-left: 10px;
@@ -486,56 +579,6 @@ body footer div h6 {
 body footer div h6 a {
   text-decoration-color: orange;
   color: orange;
-}
-
-.login {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: nowrap;
-  gap: 0px;
-  transform: translate(24vw, 15vw);
-  border: 5px solid;
-  border-radius: 100px;
-  border-width: 10px;
-  border-color: rgb(108, 107, 107);
-  width: 50vw;
-  backdrop-filter: blur(10px);
-}
-.login h2 {
-  font-size: 3vw;
-}
-.login #loginForm {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: nowrap;
-  gap: 10px;
-}
-.login #loginForm .userInput {
-  text-align: center;
-}
-.login #loginForm .userInput input {
-  letter-spacing: 3px;
-  font-weight: bolder;
-  font-size: large;
-  text-align: center;
-  width: 300px;
-  height: 25px;
-}
-.login #loginForm .buttons {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: nowrap;
-  gap: 10px;
-}
-.login #loginForm .buttons button {
-  font-size: 1.5vw;
 }
 
 @media only screen and (max-width: 1399.99px) {

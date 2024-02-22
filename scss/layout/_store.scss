@@ -27,6 +27,39 @@ body{
             transition: bottom 1s ease;
             z-index: 9999;
         }
+        #checkOutMessage{
+            position: fixed;
+            z-index: 9999;
+            background-color: white;
+            width: 600px;
+            height: 150px;
+            background-color: rgb(134, 212, 136);
+            border-radius: 25px;
+            border-color: black;
+            border-width: 2.5px;
+            border-style: groove;
+            
+            //transform: translateY(-20vw);
+            transition: top 1s ease;
+            .content{
+                position: relative;
+                text-align: center;
+                color: rgb(0, 0, 0);
+                font-weight: bolder;
+                font-size: 2vw;
+            }
+            .btns{
+                position: relative;
+                transform: translateY(2vw);
+                text-align: center;
+                button{
+                    border-radius: 100px;
+                    @include width-height(100px,30px);
+                    margin: 20px;
+                }
+                
+            }
+        }
         h1{
             text-align: center;
             font-size: 4vw;
@@ -61,14 +94,19 @@ body{
             transform: translate(30vw,10.5vw);
             border-radius: 25px;
             background-color: rgb(175, 174, 174);
-            width: 350px;
+            width: 450px;
             height: 15vw;
             @include display-flex(column,center,center,nowrap,2px);
             display: none;
             div{
                 @include display-flex(row,space-between,center,nowrap,10px);
                 padding: 10px;
-                button{
+                .buttons{
+                    display: flex;
+                    flex-direction: row;
+                    gap: 30px;
+                    transform: translateX(15px);
+                    button{
                     border-radius: 10px;
                     border-style: groove;
                     background-color: black;
@@ -77,6 +115,15 @@ body{
                     border-color: white;
                     padding: 5px;
                 }
+                    #clearButton{
+                        transform: translateX(20px);
+                    }
+                    #checkOutButton{
+                        background-color: green;
+                    }
+                }
+                
+                
             }
             ul{
                 padding-left: 10px;

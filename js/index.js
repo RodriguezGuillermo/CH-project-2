@@ -1,8 +1,8 @@
 document.getElementById("loginForm").addEventListener('submit',function(e){
     e.preventDefault()
 
-    const user = document.getElementById('user').value;
-    const password = document.getElementById('password').value;
+    const user = document.getElementById('user').value.toLowerCase();
+    const password = document.getElementById('password').value.toLowerCase();
 
     if(user === "admin" && password === "admin"){
         localStorage.setItem('correctLog',true);

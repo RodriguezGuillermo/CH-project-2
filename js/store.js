@@ -7,6 +7,11 @@ const cartList = document.getElementById('cartList');
 const clearBtn = document.getElementById('clearButton');
 const totalCartPrice = document.getElementById('totalCartPrice');
 const msg = document.getElementById("message");
+const checkOutBtn = document.getElementById('checkOutButton');
+const checkOutMsg = document.getElementById('checkOutMessage');
+const confirmCheckOut = document.getElementById('confirmButton');
+const cancelCheckOut = document.getElementById('cancelButton');
+
 
 let products = 
     [
@@ -83,7 +88,7 @@ class Item{
 }
 
 //shows all the items from the cart on the console --- BORRAR DESPUES DE ENTREGA 3
-function showCartItems(){
+function updateCartItems(){
     console.clear();
     if(cart.length>0){
         for(const items of cart){
@@ -102,11 +107,11 @@ function removeFromCart(index) {
     showMessage(itemToRemove.getName(),2)
     cart.splice(index, 1);
     // Updates the cart
-    showCart();
+    updateCart();
 }
 
 // Shows the products in the cart display.
-function showCart() {
+function updateCart() {
     //updates the price of the cart.
     totalCartPrice.textContent = `$${cartPrice}`;
 
@@ -129,12 +134,14 @@ function showCart() {
         cartList.appendChild(cartItem);
     });
     cartSpan.textContent = cart.length > 0 ? cart.length : "0";
+
+    localStorage.setItem('cart',JSON.stringify(cart));
 }
 
 //Displays the cart when cart icon is clicked
 cartBtn.addEventListener('click', function () {
     cartInfo.style.display = (cartInfo.style.display === 'none' || cartInfo.style.display === '') ? 'block' : 'none';
-    showCart();
+    updateCart();
 });
 
 //Removes all items from cart and set cartPrice to 0
@@ -143,8 +150,9 @@ clearBtn.addEventListener('click',function(){
     cart.length > 0 ? cart.splice(0, cart.length) : '';
     showMessage('',3)
     cartPrice = 0;
+
     //Updates the cart
-    showCart();
+    updateCart();
 });
 
 //adds an item to cart,if its not already added, and adds the price of the item to cartPrice.
@@ -154,16 +162,20 @@ function addToCart(productName){
 
     //if the item is already added, it doesnt adds it. otherwhise it does.
     if(cart.find(item=>item.getName() === name) === undefined || cart.length === 0){
-        cart.push(new Item(name,price));
+        let newProduct = new Item(name,price);        
+
+        cart.push(newProduct);
         cartPrice+= price;
     }
     else{
         showMessage(name,1);
     }
     //update the cart
-    showCart();
+    updateCart();
 }
 
+
+//Show the massage on a 'p' element when you clicl a certain button
 function showMessage(name,type){
     msg.style.display = 'block';
     switch(type){
@@ -175,6 +187,9 @@ function showMessage(name,type){
             break;
         case 3:
             msg.textContent = 'Cart Empty';
+            break;
+        case 4: 
+            msg.textContent = 'Your cart is empty!'
             break;
     }
 
@@ -280,4 +295,7 @@ addCardsToCarousel(33,34,clewBi);
 const salomonBi = document.getElementById("salomonBi");
 addCardsToCarousel(35,37,salomonBi);
 
+//set messages on hidden display
+checkOutMsg.style.top = '-20vw';
 msg.style.display = 'none';
+
