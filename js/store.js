@@ -17,8 +17,8 @@ let products =
     [
         //SNOWBOARDS
         //Burton brand
-        {name:'Burton Family Tree Grill Master',price:600 , img: '../images/Snowboards/Burton/burtonFamilyTreeGrillMaster.webp'},
-        {name:'Burton Mystery HometownHero',price:700 , img:'../images/Snowboards/Burton/burtonMysteryHometownHero.webp'},
+        {name:'Burton Family Tree Grill',price:600 , img: '../images/Snowboards/Burton/burtonFamilyTreeGrillMaster.webp'},
+        {name:'Burton Mystery',price:700 , img:'../images/Snowboards/Burton/burtonMysteryHometownHero.webp'},
         {name:'Burton Throwback SB',price:500, img:'../images/Snowboards/Burton/burtonThrowbackSB.webp'},
         //Capita brand
         {name:'Capita Aeronaut',price:650, img: '../images/Snowboards/Capita/capitaAeronaut.webp'},
@@ -54,7 +54,7 @@ let products =
         //HELMETS
         {name:'Anon Echo',price:350,img:'../images/Helmets/anonEcho.webp'},
         {name:'Anon Merak',price:370,img:'../images/Helmets/anonMerak.webp'},
-        {name:'Anon Merak Wavecel',price:325,img:'../images/Helmets/anonMerakWavecel.webp'},
+        {name:'Anon Mer',price:325,img:'../images/Helmets/anonMerakWavecel.webp'},
         {name:'Anon Raider',price:380,img:'../images/Helmets/anonRaider.webp'},
         {name:'Anon Rime',price:300,img:'../images/Helmets/anonRime.webp'},
         {name:'Anon Rodan',price:300,img:'../images/Helmets/anonRodan.webp'},
@@ -62,11 +62,11 @@ let products =
         //BINDINGS
         //Burton brand
         {name:'Burton MissionRe',price:250, img: '../images/Bindings/Burton/burtonMissionRe.webp'},
-        {name:'Burton StepOn Genesis',price:300, img: '../images/Bindings/Burton/burtonStepOnGenesis.webp'},
+        {name:'Burton StepOn G',price:300, img: '../images/Bindings/Burton/burtonStepOnGenesis.webp'},
         {name:'Burton StepOn Re',price:290, img: '../images/Bindings/Burton/burtonStepOnRe.webp'},
         //Clew brand
-        {name:'Clew Freedom Black',price:200, img: '../images/Bindings/Clew/clewFreedomBlack.webp'},
-        {name:'Clew Freedom White',price:220, img: '../images/Bindings/Clew/clewFreedomWhite.webp'},
+        {name:'Clew Freedom B',price:200, img: '../images/Bindings/Clew/clewFreedomBlack.webp'},
+        {name:'Clew Freedom W',price:220, img: '../images/Bindings/Clew/clewFreedomWhite.webp'},
         //Salomon brand
         {name:'Salomon District',price:250, img: '../images/Bindings/Salomon/salomonDistrict.webp'},
         {name:'Salomon Mirage',price:300, img: '../images/Bindings/Salomon/salomonMirage.webp'},
@@ -87,19 +87,7 @@ class Item{
     }
 }
 
-//shows all the items from the cart on the console --- BORRAR DESPUES DE ENTREGA 3
-function updateCartItems(){
-    console.clear();
-    if(cart.length>0){
-        for(const items of cart){
-            console.log(items.getName());
-        }
-    }
-    else{
-        console.log("Your cart is empty!");
-    }
-}
-
+//FUNCTIONS
 // removes a single item from the cart by its index and substract its price from cartPrice.
 function removeFromCart(index) {
     let itemToRemove =cart[index];
@@ -107,6 +95,25 @@ function removeFromCart(index) {
     showMessage(itemToRemove.getName(),2)
     cart.splice(index, 1);
     // Updates the cart
+    updateCart();
+}
+
+//adds an item to cart,if its not already added, and adds the price of the item to cartPrice.
+function addToCart(productName){
+    let name = products.find(the => the.name == productName).name;
+    let price = products.find(the => the.name == productName).price;
+
+    //if the item is already added, it doesnt adds it. otherwhise it does.
+    if(cart.find(item=>item.getName() === name) === undefined || cart.length === 0){
+        let newProduct = new Item(name,price);        
+
+        cart.push(newProduct);
+        cartPrice+= price;
+    }
+    else{
+        showMessage(name,1);
+    }
+    //update the cart
     updateCart();
 }
 
@@ -137,43 +144,6 @@ function updateCart() {
 
     localStorage.setItem('cart',JSON.stringify(cart));
 }
-
-//Displays the cart when cart icon is clicked
-cartBtn.addEventListener('click', function () {
-    cartInfo.style.display = (cartInfo.style.display === 'none' || cartInfo.style.display === '') ? 'block' : 'none';
-    updateCart();
-});
-
-//Removes all items from cart and set cartPrice to 0
-clearBtn.addEventListener('click',function(){
-    //checks if the cart is empty, if its not it removes all and set the cartprice to 0
-    cart.length > 0 ? cart.splice(0, cart.length) : '';
-    showMessage('',3)
-    cartPrice = 0;
-
-    //Updates the cart
-    updateCart();
-});
-
-//adds an item to cart,if its not already added, and adds the price of the item to cartPrice.
-function addToCart(productName){
-    let name = products.find(the => the.name == productName).name;
-    let price = products.find(the => the.name == productName).price;
-
-    //if the item is already added, it doesnt adds it. otherwhise it does.
-    if(cart.find(item=>item.getName() === name) === undefined || cart.length === 0){
-        let newProduct = new Item(name,price);        
-
-        cart.push(newProduct);
-        cartPrice+= price;
-    }
-    else{
-        showMessage(name,1);
-    }
-    //update the cart
-    updateCart();
-}
-
 
 //Show the massage on a 'p' element when you clicl a certain button
 function showMessage(name,type){
@@ -215,13 +185,6 @@ function showMessage(name,type){
     message.style.display = 'none';},2000);
        
 }
-
-//Event manager for "Buy" button 
-document.addEventListener('click', function(event) {
-    if (event.target && event.target.classList.contains('btn')) {
-        addToCart(event.target.previousElementSibling.parentNode.id);
-    }
-});
 
 //Adds the cards with the product name, image and price to the DOM.
 function addCards(initialRange,finalRange,container){
@@ -274,6 +237,31 @@ function addCardsToCarousel(initialRange,finalRange,container){
         container.appendChild(card);
     }
 }
+//EVENTS
+
+//Removes all items from cart and set cartPrice to 0
+clearBtn.addEventListener('click',function(){
+    //checks if the cart is empty, if its not it removes all and set the cartprice to 0
+    cart.length > 0 ? cart.splice(0, cart.length) : '';
+    showMessage('',3)
+    cartPrice = 0;
+
+    //Updates the cart
+    updateCart();
+});
+
+//Displays the cart when cart icon is clicked
+cartBtn.addEventListener('click', function () {
+    cartInfo.style.display = (cartInfo.style.display === 'none' || cartInfo.style.display === '') ? 'block' : 'none';
+    updateCart();
+});
+
+//Event manager for "Buy" button 
+document.addEventListener('click', function(event) {
+    if (event.target && event.target.classList.contains('btn')) {
+        addToCart(event.target.previousElementSibling.parentNode.id);
+    }
+});
 
 //displays a checking out message.
 checkOutBtn.addEventListener('click',()=>{
@@ -308,6 +296,7 @@ cancelCheckOut.addEventListener('click',()=>{
     
 });
 
+//Starting DOM cards and carousels
 //Adding the snowboard cards to the snowboards carrousel
 const burtonSB = document.getElementById("burtonSnowboards");
 addCardsToCarousel(0,2,burtonSB);

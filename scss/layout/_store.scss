@@ -175,19 +175,20 @@ body{
             margin-top: 20px;
             letter-spacing: 20px;
             font-size: 5vw;
-            color: white;
-            background-color: black;
+            color: rgb(0, 0, 0);
+            backdrop-filter: blur(100px);
             border-radius: 100px;
             padding: 15px;
         }
         //SNOWBOARDS
         .snowboards{
-            background: linear-gradient(rgb(141, 212, 155), rgb(249, 249, 249));
+            background: linear-gradient($background-Color, rgb(249, 249, 249));
             border-radius: 50px;
             h2{
                 text-align: center;
                 font-size: 4vw;
                 margin: 0px;
+                color: white;
             }
             .brands{
                 @include display-flex(row,center,center,nowrap,3vw);
@@ -196,6 +197,7 @@ body{
                 .burtonSB,.salomonSB,.capitaSB{
                     @include display-flex(column,center,center,nowrap,0px);
                     h3{
+                        color: white;
                         justify-content: center;
                         font-size: 3vw;
                     }
@@ -255,7 +257,7 @@ body{
         }
         //BINDINGS
         .bindings{
-            background: linear-gradient(rgb(33, 33, 33), rgb(249, 249, 249));
+            background: linear-gradient($background-Color, rgb(249, 249, 249));
             border-radius:50px;
             @include width-height(auto,32vw);
             h2{
@@ -333,21 +335,22 @@ body{
         }
         //BOOTS
         .boots{
-            background-color: rgb(129, 136, 207);
+            background: linear-gradient($background-Color, rgb(249, 249, 249));
             border-radius:50px;
             h2{
                 text-align: center;
                 font-size: 4vw;
                 margin: 0px;
+                color: white;
             }
             .brands{
-                background: linear-gradient(rgb(129, 136, 207), rgb(249, 249, 249));
                 @include display-flex(row,center,center,nowrap,4vw);
                 padding: 30px;
                 border-radius: 50px;
                 .burtonB,.salomonB,.dcB{
                     @include display-flex(column,center,center,nowrap,1vw);
                     h3{
+                        color: white;
                         justify-content: center;
                         font-size: 3vw;
                     }
@@ -406,15 +409,16 @@ body{
         }
         //HELMETS AND GOGGLES
         .goggles,.helmets{
-            @include display-flex(flex,center,center,nowrap,auto);
-            flex-direction: column;
-            background:linear-gradient(rgb(230, 235, 153),white);
+            @include display-flex(column,center,center,nowrap,20px);
+            background: linear-gradient($background-Color, rgb(249, 249, 249));
             padding: 20px;
             border-radius: 50px;
             h2{
                 text-align: center;
-                font-size: 3vw;
-                margin: 5px; 
+                font-size: 4vw;
+                margin: 5px;
+                color: white
+
             }
             .brands{
                 @include display-flex(row,center,center,nowrap,15px);

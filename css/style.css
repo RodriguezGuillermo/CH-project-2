@@ -244,19 +244,20 @@ body main .title {
   margin-top: 20px;
   letter-spacing: 20px;
   font-size: 5vw;
-  color: white;
-  background-color: black;
+  color: rgb(0, 0, 0);
+  backdrop-filter: blur(100px);
   border-radius: 100px;
   padding: 15px;
 }
 body main .snowboards {
-  background: linear-gradient(rgb(141, 212, 155), rgb(249, 249, 249));
+  background: linear-gradient(rgb(101, 124, 168), rgb(249, 249, 249));
   border-radius: 50px;
 }
 body main .snowboards h2 {
   text-align: center;
   font-size: 4vw;
   margin: 0px;
+  color: white;
 }
 body main .snowboards .brands {
   display: flex;
@@ -277,6 +278,7 @@ body main .snowboards .brands .burtonSB, body main .snowboards .brands .salomonS
   gap: 0px;
 }
 body main .snowboards .brands .burtonSB h3, body main .snowboards .brands .salomonSB h3, body main .snowboards .brands .capitaSB h3 {
+  color: white;
   justify-content: center;
   font-size: 3vw;
 }
@@ -340,7 +342,7 @@ body main .snowboards .brands .burtonSB .carousel .carousel-inner .carousel-item
   align-items: center;
 }
 body main .bindings {
-  background: linear-gradient(rgb(33, 33, 33), rgb(249, 249, 249));
+  background: linear-gradient(rgb(101, 124, 168), rgb(249, 249, 249));
   border-radius: 50px;
   width: auto;
   height: 32vw;
@@ -436,16 +438,16 @@ body main .bindings .brands .burtonBi .carousel .carousel-inner .carousel-item .
   align-items: center;
 }
 body main .boots {
-  background-color: rgb(129, 136, 207);
+  background: linear-gradient(rgb(101, 124, 168), rgb(249, 249, 249));
   border-radius: 50px;
 }
 body main .boots h2 {
   text-align: center;
   font-size: 4vw;
   margin: 0px;
+  color: white;
 }
 body main .boots .brands {
-  background: linear-gradient(rgb(129, 136, 207), rgb(249, 249, 249));
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -464,6 +466,7 @@ body main .boots .brands .burtonB, body main .boots .brands .salomonB, body main
   gap: 1vw;
 }
 body main .boots .brands .burtonB h3, body main .boots .brands .salomonB h3, body main .boots .brands .dcB h3 {
+  color: white;
   justify-content: center;
   font-size: 3vw;
 }
@@ -526,20 +529,20 @@ body main .boots .brands .burtonB .carousel .carousel-inner .carousel-item .card
 }
 body main .goggles, body main .helmets {
   display: flex;
-  flex-direction: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   flex-wrap: nowrap;
-  gap: auto;
-  flex-direction: column;
-  background: linear-gradient(rgb(230, 235, 153), white);
+  gap: 20px;
+  background: linear-gradient(rgb(101, 124, 168), rgb(249, 249, 249));
   padding: 20px;
   border-radius: 50px;
 }
 body main .goggles h2, body main .helmets h2 {
   text-align: center;
-  font-size: 3vw;
+  font-size: 4vw;
   margin: 5px;
+  color: white;
 }
 body main .goggles .brands, body main .helmets .brands {
   display: flex;
