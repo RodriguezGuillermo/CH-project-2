@@ -269,9 +269,9 @@ checkOutBtn.addEventListener('click',()=>{
     if(cart.length>0){
         screenBloquer.style.display = 'block';
         //hacer funcion para desabilitar todos los botones
-        document.getElementById('titleContent').textContent = "Do you want to checkOut?"
-        
-        checkOutMsg.style.top = '25vw';
+        document.getElementById('titleContent').textContent = `Do you want to checkOut? \n You have ${cart.length} items on your cart`
+
+        checkOutMsg.style.top = '20vw';
     }
     else{
         showMessage('',4);

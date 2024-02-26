@@ -101,10 +101,11 @@ body header #messageDiv #message {
 body header #checkOutMessage {
   position: fixed;
   z-index: 9999;
-  background-color: white;
-  width: 600px;
-  height: 150px;
-  background-color: rgb(134, 212, 136);
+  max-width: 700px;
+  width: 100%;
+  aspect-ratio: 16/4;
+  height: auto;
+  background-color: rgb(101, 124, 168);
   border-radius: 25px;
   border-color: black;
   border-width: 2.5px;
@@ -114,20 +115,40 @@ body header #checkOutMessage {
 body header #checkOutMessage .content {
   position: relative;
   text-align: center;
-  color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
   font-weight: bolder;
-  font-size: 2vw;
+  font-size: 2.5vw;
+  margin: 0px;
+  padding-top: 20px;
 }
 body header #checkOutMessage .btns {
   position: relative;
-  transform: translateY(2vw);
+  transform: translateY(-1vw);
   text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+body header #checkOutMessage .btns :hover {
+  transform: translateY(5px);
 }
 body header #checkOutMessage .btns button {
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  box-shadow: 4px 4px 8px black;
+  transition: 0.5s ease;
+  font-weight: bolder;
+  padding-left: 60px;
+  padding-right: 60px;
+  font-size: 1.1vw;
   border-radius: 100px;
+  border-style: solid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100px;
   height: 30px;
-  margin: 20px;
 }
 body header h1 {
   text-align: center;
@@ -150,6 +171,7 @@ body header span {
   background-color: black;
   transform: translate(38.5vw, -1.3vw);
   border-radius: 100px;
+  z-index: 999;
 }
 body header span h6 {
   z-index: 999;

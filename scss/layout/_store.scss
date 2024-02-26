@@ -45,32 +45,52 @@ body{
         #checkOutMessage{
             position: fixed;
             z-index: 9999;
-            background-color: white;
-            width: 600px;
-            height: 150px;
-            background-color: rgb(134, 212, 136);
-            border-radius: 25px;
+            max-width: 700px;
+            width: 100%;
+            aspect-ratio: 16/4;
+            height: auto;
+            background-color: $background-Color;
+            border-radius:25px;
             border-color: black;
             border-width: 2.5px;
             border-style: groove;
-            
-            //transform: translateY(-20vw);
             transition: top 1s ease;
             .content{
                 position: relative;
                 text-align: center;
-                color: rgb(0, 0, 0);
+                color: rgb(255, 255, 255);
                 font-weight: bolder;
-                font-size: 2vw;
+                font-size: 2.5vw;
+                margin: 0px;
+                padding-top: 20px;
             }
             .btns{
                 position: relative;
-                transform: translateY(2vw);
+                transform: translateY(-1vw);
                 text-align: center;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 50px;
+                :hover{
+                    transform: translateY(5px);
+                }
                 button{
+                    background-color: rgb(255, 255, 255);
+                    color: rgb(0, 0, 0);
+                    box-shadow: 4px 4px 8px black;
+                    transition: .5s ease;
+                    font-weight: bolder;
+                    padding-left: 60px;
+                    padding-right: 60px;
+                    font-size: 1.1vw;
                     border-radius: 100px;
+                    border-style: solid;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
                     @include width-height(100px,30px);
-                    margin: 20px;
+                    
                 }
                 
             }
@@ -87,6 +107,7 @@ body{
             transform: translateX(40vw);
             @include width-height(3.5vw,3.5vw);
             position: fixed;
+            
         }
         span{
             position: fixed;
@@ -94,6 +115,7 @@ body{
             background-color: black;
             transform: translate(38.5vw,-1.3vw);
             border-radius: 100px;
+            z-index: 999;
             h6{
                 z-index: 999;
                 color: white;
@@ -184,6 +206,7 @@ body{
         .snowboards{
             background: linear-gradient($background-Color, rgb(249, 249, 249));
             border-radius: 50px;
+            
             h2{
                 text-align: center;
                 font-size: 4vw;
