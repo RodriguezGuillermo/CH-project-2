@@ -331,4 +331,3 @@ addCardsToCarousel(35,37,salomonBi);
 
 //set messages on hidden display
 checkOutMsg.style.top = '-20vw';
-
