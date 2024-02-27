@@ -450,89 +450,22 @@ body footer div h6 a {
 }
 
 @media only screen and (max-width: 1399.99px) {
-  body main .snowboards .brands .burtonSB .carousel .carousel-control-next, body main .snowboards .brands .burtonSB .carousel .carousel-control-prev, body main .snowboards .brands .salomonSB .carousel .carousel-control-next, body main .snowboards .brands .salomonSB .carousel .carousel-control-prev, body main .snowboards .brands .capitaSB .carousel .carousel-control-next, body main .snowboards .brands .capitaSB .carousel .carousel-control-prev {
+  body main .snowboards .brands .burtonSB .carousel .carousel-control-next, body main .snowboards .brands .burtonSB .carousel .carousel-control-prev, body main .snowboards .brands .salomonSB .carousel .carousel-control-next, body main .snowboards .brands .salomonSB .carousel .carousel-control-prev, body main .snowboards .brands .capitaSB .carousel .carousel-control-next, body main .snowboards .brands .capitaSB .carousel .carousel-control-prev, body main .snowboards .brands .burtonBi .carousel .carousel-control-next, body main .snowboards .brands .burtonBi .carousel .carousel-control-prev, body main .snowboards .brands .clewBi .carousel .carousel-control-next, body main .snowboards .brands .clewBi .carousel .carousel-control-prev, body main .snowboards .brands .salomonBi .carousel .carousel-control-next, body main .snowboards .brands .salomonBi .carousel .carousel-control-prev, body main .snowboards .brands .burtonB .carousel .carousel-control-next, body main .snowboards .brands .burtonB .carousel .carousel-control-prev, body main .snowboards .brands .salomonB .carousel .carousel-control-next, body main .snowboards .brands .salomonB .carousel .carousel-control-prev, body main .snowboards .brands .dcB .carousel .carousel-control-next, body main .snowboards .brands .dcB .carousel .carousel-control-prev, body main .bindings .brands .burtonSB .carousel .carousel-control-next, body main .bindings .brands .burtonSB .carousel .carousel-control-prev, body main .bindings .brands .salomonSB .carousel .carousel-control-next, body main .bindings .brands .salomonSB .carousel .carousel-control-prev, body main .bindings .brands .capitaSB .carousel .carousel-control-next, body main .bindings .brands .capitaSB .carousel .carousel-control-prev, body main .bindings .brands .burtonBi .carousel .carousel-control-next, body main .bindings .brands .burtonBi .carousel .carousel-control-prev, body main .bindings .brands .clewBi .carousel .carousel-control-next, body main .bindings .brands .clewBi .carousel .carousel-control-prev, body main .bindings .brands .salomonBi .carousel .carousel-control-next, body main .bindings .brands .salomonBi .carousel .carousel-control-prev, body main .bindings .brands .burtonB .carousel .carousel-control-next, body main .bindings .brands .burtonB .carousel .carousel-control-prev, body main .bindings .brands .salomonB .carousel .carousel-control-next, body main .bindings .brands .salomonB .carousel .carousel-control-prev, body main .bindings .brands .dcB .carousel .carousel-control-next, body main .bindings .brands .dcB .carousel .carousel-control-prev, body main .boots .brands .burtonSB .carousel .carousel-control-next, body main .boots .brands .burtonSB .carousel .carousel-control-prev, body main .boots .brands .salomonSB .carousel .carousel-control-next, body main .boots .brands .salomonSB .carousel .carousel-control-prev, body main .boots .brands .capitaSB .carousel .carousel-control-next, body main .boots .brands .capitaSB .carousel .carousel-control-prev, body main .boots .brands .burtonBi .carousel .carousel-control-next, body main .boots .brands .burtonBi .carousel .carousel-control-prev, body main .boots .brands .clewBi .carousel .carousel-control-next, body main .boots .brands .clewBi .carousel .carousel-control-prev, body main .boots .brands .salomonBi .carousel .carousel-control-next, body main .boots .brands .salomonBi .carousel .carousel-control-prev, body main .boots .brands .burtonB .carousel .carousel-control-next, body main .boots .brands .burtonB .carousel .carousel-control-prev, body main .boots .brands .salomonB .carousel .carousel-control-next, body main .boots .brands .salomonB .carousel .carousel-control-prev, body main .boots .brands .dcB .carousel .carousel-control-next, body main .boots .brands .dcB .carousel .carousel-control-prev {
     height: 16vw;
   }
-  body main .snowboards .brands .burtonSB .carousel .carousel-indicators, body main .snowboards .brands .salomonSB .carousel .carousel-indicators, body main .snowboards .brands .capitaSB .carousel .carousel-indicators {
+  body main .snowboards .brands .burtonSB .carousel .carousel-indicators, body main .snowboards .brands .salomonSB .carousel .carousel-indicators, body main .snowboards .brands .capitaSB .carousel .carousel-indicators, body main .snowboards .brands .burtonBi .carousel .carousel-indicators, body main .snowboards .brands .clewBi .carousel .carousel-indicators, body main .snowboards .brands .salomonBi .carousel .carousel-indicators, body main .snowboards .brands .burtonB .carousel .carousel-indicators, body main .snowboards .brands .salomonB .carousel .carousel-indicators, body main .snowboards .brands .dcB .carousel .carousel-indicators, body main .bindings .brands .burtonSB .carousel .carousel-indicators, body main .bindings .brands .salomonSB .carousel .carousel-indicators, body main .bindings .brands .capitaSB .carousel .carousel-indicators, body main .bindings .brands .burtonBi .carousel .carousel-indicators, body main .bindings .brands .clewBi .carousel .carousel-indicators, body main .bindings .brands .salomonBi .carousel .carousel-indicators, body main .bindings .brands .burtonB .carousel .carousel-indicators, body main .bindings .brands .salomonB .carousel .carousel-indicators, body main .bindings .brands .dcB .carousel .carousel-indicators, body main .boots .brands .burtonSB .carousel .carousel-indicators, body main .boots .brands .salomonSB .carousel .carousel-indicators, body main .boots .brands .capitaSB .carousel .carousel-indicators, body main .boots .brands .burtonBi .carousel .carousel-indicators, body main .boots .brands .clewBi .carousel .carousel-indicators, body main .boots .brands .salomonBi .carousel .carousel-indicators, body main .boots .brands .burtonB .carousel .carousel-indicators, body main .boots .brands .salomonB .carousel .carousel-indicators, body main .boots .brands .dcB .carousel .carousel-indicators {
     bottom: 10vw;
   }
-  body main .snowboards .brands .burtonSB .carousel .carousel-inner, body main .snowboards .brands .salomonSB .carousel .carousel-inner, body main .snowboards .brands .capitaSB .carousel .carousel-inner {
+  body main .snowboards .brands .burtonSB .carousel .carousel-inner, body main .snowboards .brands .salomonSB .carousel .carousel-inner, body main .snowboards .brands .capitaSB .carousel .carousel-inner, body main .snowboards .brands .burtonBi .carousel .carousel-inner, body main .snowboards .brands .clewBi .carousel .carousel-inner, body main .snowboards .brands .salomonBi .carousel .carousel-inner, body main .snowboards .brands .burtonB .carousel .carousel-inner, body main .snowboards .brands .salomonB .carousel .carousel-inner, body main .snowboards .brands .dcB .carousel .carousel-inner, body main .bindings .brands .burtonSB .carousel .carousel-inner, body main .bindings .brands .salomonSB .carousel .carousel-inner, body main .bindings .brands .capitaSB .carousel .carousel-inner, body main .bindings .brands .burtonBi .carousel .carousel-inner, body main .bindings .brands .clewBi .carousel .carousel-inner, body main .bindings .brands .salomonBi .carousel .carousel-inner, body main .bindings .brands .burtonB .carousel .carousel-inner, body main .bindings .brands .salomonB .carousel .carousel-inner, body main .bindings .brands .dcB .carousel .carousel-inner, body main .boots .brands .burtonSB .carousel .carousel-inner, body main .boots .brands .salomonSB .carousel .carousel-inner, body main .boots .brands .capitaSB .carousel .carousel-inner, body main .boots .brands .burtonBi .carousel .carousel-inner, body main .boots .brands .clewBi .carousel .carousel-inner, body main .boots .brands .salomonBi .carousel .carousel-inner, body main .boots .brands .burtonB .carousel .carousel-inner, body main .boots .brands .salomonB .carousel .carousel-inner, body main .boots .brands .dcB .carousel .carousel-inner {
     width: 15vw;
     height: 30vw;
   }
-  body main .snowboards .brands .burtonSB .carousel .carousel-inner .carousel-item .card, body main .snowboards .brands .salomonSB .carousel .carousel-inner .carousel-item .card, body main .snowboards .brands .capitaSB .carousel .carousel-inner .carousel-item .card {
+  body main .snowboards .brands .burtonSB .carousel .carousel-inner .carousel-item .card, body main .snowboards .brands .salomonSB .carousel .carousel-inner .carousel-item .card, body main .snowboards .brands .capitaSB .carousel .carousel-inner .carousel-item .card, body main .snowboards .brands .burtonBi .carousel .carousel-inner .carousel-item .card, body main .snowboards .brands .clewBi .carousel .carousel-inner .carousel-item .card, body main .snowboards .brands .salomonBi .carousel .carousel-inner .carousel-item .card, body main .snowboards .brands .burtonB .carousel .carousel-inner .carousel-item .card, body main .snowboards .brands .salomonB .carousel .carousel-inner .carousel-item .card, body main .snowboards .brands .dcB .carousel .carousel-inner .carousel-item .card, body main .bindings .brands .burtonSB .carousel .carousel-inner .carousel-item .card, body main .bindings .brands .salomonSB .carousel .carousel-inner .carousel-item .card, body main .bindings .brands .capitaSB .carousel .carousel-inner .carousel-item .card, body main .bindings .brands .burtonBi .carousel .carousel-inner .carousel-item .card, body main .bindings .brands .clewBi .carousel .carousel-inner .carousel-item .card, body main .bindings .brands .salomonBi .carousel .carousel-inner .carousel-item .card, body main .bindings .brands .burtonB .carousel .carousel-inner .carousel-item .card, body main .bindings .brands .salomonB .carousel .carousel-inner .carousel-item .card, body main .bindings .brands .dcB .carousel .carousel-inner .carousel-item .card, body main .boots .brands .burtonSB .carousel .carousel-inner .carousel-item .card, body main .boots .brands .salomonSB .carousel .carousel-inner .carousel-item .card, body main .boots .brands .capitaSB .carousel .carousel-inner .carousel-item .card, body main .boots .brands .burtonBi .carousel .carousel-inner .carousel-item .card, body main .boots .brands .clewBi .carousel .carousel-inner .carousel-item .card, body main .boots .brands .salomonBi .carousel .carousel-inner .carousel-item .card, body main .boots .brands .burtonB .carousel .carousel-inner .carousel-item .card, body main .boots .brands .salomonB .carousel .carousel-inner .carousel-item .card, body main .boots .brands .dcB .carousel .carousel-inner .carousel-item .card {
     width: auto;
     height: 29vw;
   }
-  body main .snowboards .brands .burtonSB .carousel .carousel-inner .carousel-item .card .card-body, body main .snowboards .brands .salomonSB .carousel .carousel-inner .carousel-item .card .card-body, body main .snowboards .brands .capitaSB .carousel .carousel-inner .carousel-item .card .card-body {
+  body main .snowboards .brands .burtonSB .carousel .carousel-inner .carousel-item .card .card-body, body main .snowboards .brands .salomonSB .carousel .carousel-inner .carousel-item .card .card-body, body main .snowboards .brands .capitaSB .carousel .carousel-inner .carousel-item .card .card-body, body main .snowboards .brands .burtonBi .carousel .carousel-inner .carousel-item .card .card-body, body main .snowboards .brands .clewBi .carousel .carousel-inner .carousel-item .card .card-body, body main .snowboards .brands .salomonBi .carousel .carousel-inner .carousel-item .card .card-body, body main .snowboards .brands .burtonB .carousel .carousel-inner .carousel-item .card .card-body, body main .snowboards .brands .salomonB .carousel .carousel-inner .carousel-item .card .card-body, body main .snowboards .brands .dcB .carousel .carousel-inner .carousel-item .card .card-body, body main .bindings .brands .burtonSB .carousel .carousel-inner .carousel-item .card .card-body, body main .bindings .brands .salomonSB .carousel .carousel-inner .carousel-item .card .card-body, body main .bindings .brands .capitaSB .carousel .carousel-inner .carousel-item .card .card-body, body main .bindings .brands .burtonBi .carousel .carousel-inner .carousel-item .card .card-body, body main .bindings .brands .clewBi .carousel .carousel-inner .carousel-item .card .card-body, body main .bindings .brands .salomonBi .carousel .carousel-inner .carousel-item .card .card-body, body main .bindings .brands .burtonB .carousel .carousel-inner .carousel-item .card .card-body, body main .bindings .brands .salomonB .carousel .carousel-inner .carousel-item .card .card-body, body main .bindings .brands .dcB .carousel .carousel-inner .carousel-item .card .card-body, body main .boots .brands .burtonSB .carousel .carousel-inner .carousel-item .card .card-body, body main .boots .brands .salomonSB .carousel .carousel-inner .carousel-item .card .card-body, body main .boots .brands .capitaSB .carousel .carousel-inner .carousel-item .card .card-body, body main .boots .brands .burtonBi .carousel .carousel-inner .carousel-item .card .card-body, body main .boots .brands .clewBi .carousel .carousel-inner .carousel-item .card .card-body, body main .boots .brands .salomonBi .carousel .carousel-inner .carousel-item .card .card-body, body main .boots .brands .burtonB .carousel .carousel-inner .carousel-item .card .card-body, body main .boots .brands .salomonB .carousel .carousel-inner .carousel-item .card .card-body, body main .boots .brands .dcB .carousel .carousel-inner .carousel-item .card .card-body {
     transform: translateY(1vw);
-  }
-  body main .bindings {
-    height: 35vw;
-  }
-  body main .bindings .brands .burtonBi .carousel, body main .bindings .brands .clewBi .carousel, body main .bindings .brands .salomonBi .carousel {
-    align-items: center;
-  }
-  body main .bindings .brands .burtonBi .carousel .carousel-control-next, body main .bindings .brands .burtonBi .carousel .carousel-control-prev, body main .bindings .brands .clewBi .carousel .carousel-control-next, body main .bindings .brands .clewBi .carousel .carousel-control-prev, body main .bindings .brands .salomonBi .carousel .carousel-control-next, body main .bindings .brands .salomonBi .carousel .carousel-control-prev {
-    width: 2vw;
-    height: 14vw;
-  }
-  body main .bindings .brands .burtonBi .carousel .carousel-indicators, body main .bindings .brands .clewBi .carousel .carousel-indicators, body main .bindings .brands .salomonBi .carousel .carousel-indicators {
-    bottom: 10vw;
-  }
-  body main .bindings .brands .burtonBi .carousel .carousel-inner, body main .bindings .brands .clewBi .carousel .carousel-inner, body main .bindings .brands .salomonBi .carousel .carousel-inner {
-    width: 12vw;
-    height: 25vw;
-  }
-  body main .bindings .brands .burtonBi .carousel .carousel-inner .carousel-item .card, body main .bindings .brands .clewBi .carousel .carousel-inner .carousel-item .card, body main .bindings .brands .salomonBi .carousel .carousel-inner .carousel-item .card {
-    width: 12vw;
-    height: 25vw;
-  }
-  body main .boots {
-    background-color: rgb(129, 136, 207);
-    border-radius: 50px;
-  }
-  body main .boots h2 {
-    text-align: center;
-    font-size: 4vw;
-    margin: 0px;
-  }
-  body main .boots .brands {
-    background: linear-gradient(rgb(129, 136, 207), rgb(249, 249, 249));
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: nowrap;
-    gap: 4vw;
-    padding: 30px;
-    border-radius: 50px;
-  }
-  body main .boots .brands .burtonB .carousel, body main .boots .brands .salomonB .carousel, body main .boots .brands .dcB .carousel {
-    width: 15vw;
-    height: 25vw;
-  }
-  body main .boots .brands .burtonB .carousel .carousel-control-next, body main .boots .brands .burtonB .carousel .carousel-control-prev, body main .boots .brands .salomonB .carousel .carousel-control-next, body main .boots .brands .salomonB .carousel .carousel-control-prev, body main .boots .brands .dcB .carousel .carousel-control-next, body main .boots .brands .dcB .carousel .carousel-control-prev {
-    height: 15vw;
-  }
-  body main .boots .brands .burtonB .carousel .carousel-indicators, body main .boots .brands .salomonB .carousel .carousel-indicators, body main .boots .brands .dcB .carousel .carousel-indicators {
-    bottom: 10vw;
-  }
-  body main .boots .brands .burtonB .carousel .carousel-inner, body main .boots .brands .salomonB .carousel .carousel-inner, body main .boots .brands .dcB .carousel .carousel-inner {
-    width: 15vw;
-    height: 25vw;
-  }
-  body main .boots .brands .burtonB .carousel .carousel-inner .carousel-item .card, body main .boots .brands .salomonB .carousel .carousel-inner .carousel-item .card, body main .boots .brands .dcB .carousel .carousel-inner .carousel-item .card {
-    width: auto;
-    height: 25vw;
-  }
-  body main .boots .brands .burtonB .carousel .carousel-inner .carousel-item .card .card-body, body main .boots .brands .salomonB .carousel .carousel-inner .carousel-item .card .card-body, body main .boots .brands .dcB .carousel .carousel-inner .carousel-item .card .card-body {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: nowrap;
-    gap: 0px;
   }
   body main .helmets .brands .card {
     border-radius: 25px;
@@ -587,26 +520,6 @@ body footer div h6 a {
   body main .helmets .brands .card .card-body {
     width: 12vw;
     height: 22vw;
-  }
-  body main .bindings {
-    height: 38vw;
-  }
-  body main .bindings .brands .burtonBi .carousel .carousel-indicators, body main .bindings .brands .clewBi .carousel .carousel-indicators, body main .bindings .brands .salomonBi .carousel .carousel-indicators {
-    transform: translate(1vw, 1vw);
-  }
-  body main .bindings .brands .burtonBi .carousel .carousel-inner, body main .bindings .brands .clewBi .carousel .carousel-inner, body main .bindings .brands .salomonBi .carousel .carousel-inner {
-    width: 15vw;
-  }
-  body main .bindings .brands .burtonBi .carousel .carousel-inner .carousel-item .card, body main .bindings .brands .clewBi .carousel .carousel-inner .carousel-item .card, body main .bindings .brands .salomonBi .carousel .carousel-inner .carousel-item .card {
-    width: 15vw;
-  }
-  body main .bindings .brands .burtonBi .carousel .carousel-inner .carousel-item .card img, body main .bindings .brands .clewBi .carousel .carousel-inner .carousel-item .card img, body main .bindings .brands .salomonBi .carousel .carousel-inner .carousel-item .card img {
-    transform: translate(2vw, 0.5vw);
-    width: 11vw;
-    height: 11vw;
-  }
-  body main .bindings .brands .burtonBi .carousel .carousel-inner .carousel-item .card .card-body .card-title, body main .bindings .brands .clewBi .carousel .carousel-inner .carousel-item .card .card-body .card-title, body main .bindings .brands .salomonBi .carousel .carousel-inner .carousel-item .card .card-body .card-title {
-    font-size: 1.5vw;
   }
 }
 
