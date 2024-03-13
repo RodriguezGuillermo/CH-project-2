@@ -1,0 +1,230 @@
+[
+  {
+    "id": 1,
+    "name": "Burton Family Tree",
+    "price": 600,
+    "img": "../images/Snowboards/Burton/burtonFamilyTreeGrillMaster.webp"
+  },
+  {
+    "id": 2,
+    "name": "Burton Mystery",
+    "price": 700,
+    "img": "../images/Snowboards/Burton/burtonMysteryHometownHero.webp"
+  },
+  {
+    "id": 3,
+    "name": "Burton Throwback SB",
+    "price": 500,
+    "img": "../images/Snowboards/Burton/burtonThrowbackSB.webp"
+  },
+  {
+    "id": 4,
+    "name": "Capita Aeronaut",
+    "price": 650,
+    "img": "../images/Snowboards/Capita/capitaAeronaut.webp"
+  },
+  {
+    "id": 5,
+    "name": "Capita DOA",
+    "price": 800,
+    "img": "../images/Snowboards/Capita/capitaDOA.webp"
+  },
+  {
+    "id": 6,
+    "name": "Capita Paradise",
+    "price": 550,
+    "img": "../images/Snowboards/Capita/capitaParadise.webp"
+  },
+  {
+    "id": 7,
+    "name": "Salomon Assasin",
+    "price": 750,
+    "img": "../images/Snowboards/Salomon/salomonAssasin.webp"
+  },
+  {
+    "id": 8,
+    "name": "Salomon Assasin Pro",
+    "price": 800,
+    "img": "../images/Snowboards/Salomon/salomonAssasinPro.webp"
+  },
+  {
+    "id": 9,
+    "name": "Salomon Rumble Fish",
+    "price": 750,
+    "img": "../images/Snowboards/Salomon/salomonRumbleFish.webp"
+  },
+  {
+    "id": 10,
+    "name": "Anon Helix",
+    "price": 300,
+    "img": "../images/Goggles/anonHelix.webp"
+  },
+  {
+    "id": 11,
+    "name": "Anon M4",
+    "price": 350,
+    "img": "../images/Goggles/anonM4.webp"
+  },
+  {
+    "id": 12,
+    "name": "Anon M4s",
+    "price": 325,
+    "img": "../images/Goggles/anonM4s.webp"
+  },
+  {
+    "id": 13,
+    "name": "Anon Nesa",
+    "price": 280,
+    "img": "../images/Goggles/anonNesa.webp"
+  },
+  {
+    "id": 14,
+    "name": "Anon Sync",
+    "price": 350,
+    "img": "../images/Goggles/anonSync.webp"
+  },
+  {
+    "id": 15,
+    "name": "Anon SyncL",
+    "price": 300,
+    "img": "../images/Goggles/anonSyncLow.webp"
+  },
+  {
+    "id": 16,
+    "name": "Burton Ion StepOn",
+    "price": 300,
+    "img": "../images/Boots/Burton/burtonIonStepOn.webp"
+  },
+  {
+    "id": 17,
+    "name": "Burton Photon StepOn",
+    "price": 350,
+    "img": "../images/Boots/Burton/burtonPhotonStepOn.webp"
+  },
+  {
+    "id": 18,
+    "name": "Burton Swath StepOn",
+    "price": 290,
+    "img": "../images/Boots/Burton/burtonSwathStepOn.webp"
+  },
+  {
+    "id": 19,
+    "name": "DC Judge StepOn",
+    "price": 350,
+    "img": "../images/Boots/DC/dcJudgeStepOn.jpg"
+  },
+  {
+    "id": 20,
+    "name": "DC PhasePro StepOn",
+    "price": 350,
+    "img": "../images/Boots/DC/dcPhaseProStepOn.jpg"
+  },
+  {
+    "id": 21,
+    "name": "DC Premier Hybrid",
+    "price": 300,
+    "img": "../images/Boots/DC/dcPremierHybrid.jpg"
+  },
+  {
+    "id": 22,
+    "name": "Salomon Dialogue",
+    "price": 250,
+    "img": "../images/Boots/Salomon/salomonDialogue.webp"
+  },
+  {
+    "id": 23,
+    "name": "Salomon Dialogue Dual",
+    "price": 300,
+    "img": "../images/Boots/Salomon/salomonDialogueDual.webp"
+  },
+  {
+    "id": 24,
+    "name": "Salomon Launch",
+    "price": 350,
+    "img": "../images/Boots/Salomon/salomonLaunch.webp"
+  },
+  {
+    "id": 25,
+    "name": "Anon Echo",
+    "price": 350,
+    "img": "../images/Helmets/anonEcho.webp"
+  },
+  {
+    "id": 26,
+    "name": "Anon Merak",
+    "price": 370,
+    "img": "../images/Helmets/anonMerak.webp"
+  },
+  {
+    "id": 27,
+    "name": "Anon Mer",
+    "price": 325,
+    "img": "../images/Helmets/anonMerakWavecel.webp"
+  },
+  {
+    "id": 28,
+    "name": "Anon Raider",
+    "price": 380,
+    "img": "../images/Helmets/anonRaider.webp"
+  },
+  {
+    "id": 29,
+    "name": "Anon Rime",
+    "price": 300,
+    "img": "../images/Helmets/anonRime.webp"
+  },
+  {
+    "id": 30,
+    "name": "Anon Rodan",
+    "price": 300,
+    "img": "../images/Helmets/anonRodan.webp"
+  },
+  {
+    "id": 31,
+    "name": "Burton MissionRe",
+    "price": 250,
+    "img": "../images/Bindings/Burton/burtonMissionRe.webp"
+  },
+  {
+    "id": 32,
+    "name": "Burton StepOn G",
+    "price": 300,
+    "img": "../images/Bindings/Burton/burtonStepOnGenesis.webp"
+  },
+  {
+    "id": 33,
+    "name": "Burton StepOn Re",
+    "price": 290,
+    "img": "../images/Bindings/Burton/burtonStepOnRe.webp"
+  },
+  {
+    "id": 34,
+    "name": "Clew Freedom B",
+    "price": 200,
+    "img": "../images/Bindings/Clew/clewFreedomBlack.webp"
+  },
+  {
+    "id": 35,
+    "name": "Clew Freedom W",
+    "price": 220,
+    "img": "../images/Bindings/Clew/clewFreedomWhite.webp"
+  },
+  {
+    "id": 36,
+    "name": "Salomon District",
+    "price": 250,
+    "img": "../images/Bindings/Salomon/salomonDistrict.webp"
+  },
+  {
+    "id": 37,
+    "name": "Salomon Mirage",
+    "price": 300,
+    "img": "../images/Bindings/Salomon/salomonMirage.webp"
+  },
+  {
+    "id": 38,
+    "name": "Salomon Rhythm",
+    "price": 300,
+    "img": "../images/Bindings/Salomon/salomonRhythm.webp"
+  }
+]

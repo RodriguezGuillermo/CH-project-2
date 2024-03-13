@@ -21,172 +21,10 @@ const Toast = Swal.mixin({
   },
 });
 
-let products = [
-  //SNOWBOARDS
-  //Burton brand
-  {
-    name: "Burton Family Tree Grill",
-    price: 600,
-    img: "../images/Snowboards/Burton/burtonFamilyTreeGrillMaster.webp",
-  },
-  {
-    name: "Burton Mystery",
-    price: 700,
-    img: "../images/Snowboards/Burton/burtonMysteryHometownHero.webp",
-  },
-  {
-    name: "Burton Throwback SB",
-    price: 500,
-    img: "../images/Snowboards/Burton/burtonThrowbackSB.webp",
-  },
-  //Capita brand
-  {
-    name: "Capita Aeronaut",
-    price: 650,
-    img: "../images/Snowboards/Capita/capitaAeronaut.webp",
-  },
-  {
-    name: "Capita DOA",
-    price: 800,
-    img: "../images/Snowboards/Capita/capitaDOA.webp",
-  },
-  {
-    name: "Capita Paradise",
-    price: 550,
-    img: "../images/Snowboards/Capita/capitaParadise.webp",
-  },
-  //Salomon brand
-  {
-    name: "Salomon Assasin",
-    price: 750,
-    img: "../images/Snowboards/Salomon/salomonAssasin.webp",
-  },
-  {
-    name: "Salomon Assasin Pro",
-    price: 800,
-    img: "../images/Snowboards/Salomon/salomonAssasinPro.webp",
-  },
-  {
-    name: "Salomon Rumble Fish",
-    price: 750,
-    img: "../images/Snowboards/Salomon/salomonRumbleFish.webp",
-  },
+const productsUrl = "../json/products.json";
 
-  //GOGGLES
-  { name: "Anon Helix", price: 300, img: "../images/Goggles/anonHelix.webp" },
-  { name: "Anon M4", price: 350, img: "../images/Goggles/anonM4.webp" },
-  { name: "Anon M4s", price: 325, img: "../images/Goggles/anonM4s.webp" },
-  { name: "Anon Nesa", price: 280, img: "../images/Goggles/anonNesa.webp" },
-  { name: "Anon Sync", price: 350, img: "../images/Goggles/anonSync.webp" },
-  { name: "Anon SyncL", price: 300, img: "../images/Goggles/anonSyncLow.webp" },
+let products = [];
 
-  //BOOTS
-  //Burton brand
-  {
-    name: "Burton Ion StepOn",
-    price: 300,
-    img: "../images/Boots/Burton/burtonIonStepOn.webp",
-  },
-  {
-    name: "Burton Photon StepOn",
-    price: 350,
-    img: "../images/Boots/Burton/burtonPhotonStepOn.webp",
-  },
-  {
-    name: "Burton Swath StepOn",
-    price: 290,
-    img: "../images/Boots/Burton/burtonSwathStepOn.webp",
-  },
-  //DC brand
-  {
-    name: "DC Judge StepOn",
-    price: 350,
-    img: "../images/Boots/DC/dcJudgeStepOn.jpg",
-  },
-  {
-    name: "DC PhasePro StepOn",
-    price: 350,
-    img: "../images/Boots/DC/dcPhaseProStepOn.jpg",
-  },
-  {
-    name: "DC Premier Hybrid",
-    price: 300,
-    img: "../images/Boots/DC/dcPremierHybrid.jpg",
-  },
-  //Salomon brand
-  {
-    name: "Salomon Dialogue",
-    price: 250,
-    img: "../images/Boots/Salomon/salomonDialogue.webp",
-  },
-  {
-    name: "Salomon Dialogue Dual",
-    price: 300,
-    img: "../images/Boots/Salomon/salomonDialogueDual.webp",
-  },
-  {
-    name: "Salomon Launch",
-    price: 350,
-    img: "../images/Boots/Salomon/salomonLaunch.webp",
-  },
-
-  //HELMETS
-  { name: "Anon Echo", price: 350, img: "../images/Helmets/anonEcho.webp" },
-  { name: "Anon Merak", price: 370, img: "../images/Helmets/anonMerak.webp" },
-  {
-    name: "Anon Mer",
-    price: 325,
-    img: "../images/Helmets/anonMerakWavecel.webp",
-  },
-  { name: "Anon Raider", price: 380, img: "../images/Helmets/anonRaider.webp" },
-  { name: "Anon Rime", price: 300, img: "../images/Helmets/anonRime.webp" },
-  { name: "Anon Rodan", price: 300, img: "../images/Helmets/anonRodan.webp" },
-
-  //BINDINGS
-  //Burton brand
-  {
-    name: "Burton MissionRe",
-    price: 250,
-    img: "../images/Bindings/Burton/burtonMissionRe.webp",
-  },
-  {
-    name: "Burton StepOn G",
-    price: 300,
-    img: "../images/Bindings/Burton/burtonStepOnGenesis.webp",
-  },
-  {
-    name: "Burton StepOn Re",
-    price: 290,
-    img: "../images/Bindings/Burton/burtonStepOnRe.webp",
-  },
-  //Clew brand
-  {
-    name: "Clew Freedom B",
-    price: 200,
-    img: "../images/Bindings/Clew/clewFreedomBlack.webp",
-  },
-  {
-    name: "Clew Freedom W",
-    price: 220,
-    img: "../images/Bindings/Clew/clewFreedomWhite.webp",
-  },
-  //Salomon brand
-  {
-    name: "Salomon District",
-    price: 250,
-    img: "../images/Bindings/Salomon/salomonDistrict.webp",
-  },
-  {
-    name: "Salomon Mirage",
-    price: 300,
-    img: "../images/Bindings/Salomon/salomonMirage.webp",
-  },
-  {
-    name: "Salomon Rhythm",
-    price: 300,
-    img: "../images/Bindings/Salomon/salomonRhythm.webp",
-  },
-];
 class Item {
   constructor(name, price) {
     this.name = name;
@@ -197,6 +35,22 @@ class Item {
   }
   getPrice() {
     return this.price;
+  }
+}
+
+async function loadProducts() {
+  try {
+    const response = await fetch(productsUrl);
+    const productsJSON = await response.json();
+    for (const item of productsJSON) {
+      products.push({
+        name: item.name,
+        price: item.price,
+        img: item.img,
+      });
+    }
+  } catch (error) {
+    console.log(error);
   }
 }
 
@@ -264,23 +118,44 @@ function updateCart() {
     cartList.appendChild(cartItem);
   });
   cartSpan.textContent = cart.length > 0 ? cart.length : "0";
-  cart.length > 0 ? checkOutBtn.style.display = 'block' : checkOutBtn.style.display = 'none';
+  cart.length > 0
+    ? (checkOutBtn.style.display = "block")
+    : (checkOutBtn.style.display = "none");
   localStorage.setItem("cart", JSON.stringify(cart));
 }
 
 //Adds the cards with the product name, image and price to the DOM.
 function addCards(initialRange, finalRange, container) {
   for (let i = initialRange; i <= finalRange; i++) {
+    console.log(products[0]);
     const card = document.createElement("div");
     card.classList.add("card");
-    card.innerHTML = `
-                        <img src="${products[i].img}" class="card-img-top" alt="...">
-                            <div class="card-body" id="${products[i].name}">
-                            <h5 class="card-title">${products[i].name}</h5>
-                            <p class="card-text">$${products[i].price}USD</p>
-                            <button href="#" class="btn btn-primary" id="buyButton">Buy</button>
-                        </div>
-        `;
+    const cardImage = document.createElement("img");
+    cardImage.classList.add("card-img-top");
+    cardImage.src = products[i].img;
+
+    const cardDiv = document.createElement("div");
+    cardDiv.classList.add("card-body");
+    cardDiv.id = products[i].name;
+
+    const cardDivTitle = document.createElement("h5");
+    cardDivTitle.classList.add("card-title");
+    cardDivTitle.textContent = products[i].name;
+    cardDiv.appendChild(cardDivTitle);
+
+    const cardDivP = document.createElement("p");
+    cardDivP.classList.add("card-text");
+    cardDivP.textContent = `$${products[i].price}USD`;
+    cardDiv.appendChild(cardDivP);
+
+    const cardDivButton = document.createElement("button");
+    cardDivButton.classList.add("btn", "btn-primart");
+    cardDivButton.id = "buyButton";
+    cardDivButton.textContent = "Buy";
+    cardDiv.appendChild(cardDivButton);
+
+    card.appendChild(cardImage);
+    card.appendChild(cardDiv);
     container.appendChild(card);
   }
 }
@@ -402,35 +277,37 @@ checkOutBtn.addEventListener("click", () => {
   }
 });
 
+loadProducts();
+
 //Starting DOM cards and carousels
 //Adding the snowboard cards to the snowboards carrousel
 const burtonSB = document.getElementById("burtonSnowboards");
-addCardsToCarousel(0, 2, burtonSB);
+addCardsToCarousel(1, 3, burtonSB);
 const capitaSB = document.getElementById("capitaSnowboards");
-addCardsToCarousel(3, 5, capitaSB);
+addCardsToCarousel(4, 6, capitaSB);
 const salomonSB = document.getElementById("salomonSnowboards");
-addCardsToCarousel(6, 8, salomonSB);
+addCardsToCarousel(7, 9, salomonSB);
 
 //Adding the goggles cards
 const goggles = document.getElementById("goggles");
-addCards(9, 14, goggles);
+addCards(10, 15, goggles);
 
 //Adding the boots cards to the boots carrousel
 const burtonB = document.getElementById("burtonBoots");
-addCardsToCarousel(15, 17, burtonB);
+addCardsToCarousel(16, 18, burtonB);
 const dcB = document.getElementById("dcBoots");
-addCardsToCarousel(18, 20, dcB);
+addCardsToCarousel(19, 21, dcB);
 const salomonB = document.getElementById("salomonBoots");
-addCardsToCarousel(21, 23, salomonB);
+addCardsToCarousel(22, 24, salomonB);
 
 //Adding the helmets cards.
 const helmets = document.getElementById("helmets");
-addCards(24, 29, helmets);
+addCards(25, 30, helmets);
 
 //Adding the bindings cards to the bindings carrousel
 const burtonBi = document.getElementById("burtonBi");
-addCardsToCarousel(30, 32, burtonBi);
+addCardsToCarousel(31, 33, burtonBi);
 const clewBi = document.getElementById("clewBi");
-addCardsToCarousel(33, 34, clewBi);
+addCardsToCarousel(34, 35, clewBi);
 const salomonBi = document.getElementById("salomonBi");
-addCardsToCarousel(35, 37, salomonBi);
+addCardsToCarousel(36, 38, salomonBi);
