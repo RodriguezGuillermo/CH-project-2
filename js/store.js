@@ -38,6 +38,9 @@ class Item {
   }
 }
 
+//FUNCTIONS
+
+//Load all the products from the products.json to an array
 async function loadProducts() {
   try {
     const response = await fetch(productsUrl);
@@ -55,7 +58,6 @@ async function loadProducts() {
   }
 }
 
-//FUNCTIONS
 // removes a single item from the cart by its index and substract its price from cartPrice.
 function removeFromCart(index) {
   let itemToRemove = cart[index];
@@ -131,6 +133,7 @@ function addCards(initialRange, finalRange, container) {
     const card = document.createElement("div");
     card.classList.add("card");
     const cardImage = document.createElement("img");
+    cardImage.alt = "Snowboard product";
     cardImage.classList.add("card-img-top");
     cardImage.src = products[i].img;
 
@@ -167,7 +170,7 @@ function addCardsToCarousel(initialRange, finalRange, container) {
   card.classList.add("carousel-item", "active");
   card.innerHTML = `
                         <div class="card" >
-                            <img src="${products[i].img}" class="card-img-top" alt="...">
+                            <img src="${products[i].img}" class="card-img-top" alt="Snowboard product">
                             <div class="card-body" id="${products[i].name}">
                                 <h5 class="card-title">${products[i].name}</h5>
                                 <p class="card-text" >$${products[i].price}USD</p>
@@ -203,6 +206,42 @@ function checkOut() {
     window.location.href = "../index.html";
   }, 2000);
 }
+
+//Starting DOM cards and carousels
+function loadCards() {
+  //Adding the snowboard cards to the snowboards carrousel
+  const burtonSB = document.getElementById("burtonSnowboards");
+  addCardsToCarousel(0, 2, burtonSB);
+  const capitaSB = document.getElementById("capitaSnowboards");
+  addCardsToCarousel(3, 5, capitaSB);
+  const salomonSB = document.getElementById("salomonSnowboards");
+  addCardsToCarousel(6, 8, salomonSB);
+
+  //Adding the goggles cards
+  const goggles = document.getElementById("goggles");
+  addCards(9, 14, goggles);
+
+  //Adding the boots cards to the boots carrousel
+  const burtonB = document.getElementById("burtonBoots");
+  addCardsToCarousel(15, 17, burtonB);
+  const dcB = document.getElementById("dcBoots");
+  addCardsToCarousel(18, 20, dcB);
+  const salomonB = document.getElementById("salomonBoots");
+  addCardsToCarousel(21, 23, salomonB);
+
+  //Adding the helmets cards.
+  const helmets = document.getElementById("helmets");
+  addCards(24, 29, helmets);
+
+  //Adding the bindings cards to the bindings carrousel
+  const burtonBi = document.getElementById("burtonBi");
+  addCardsToCarousel(30, 32, burtonBi);
+  const clewBi = document.getElementById("clewBi");
+  addCardsToCarousel(33, 34, clewBi);
+  const salomonBi = document.getElementById("salomonBi");
+  addCardsToCarousel(35, 37, salomonBi);
+}
+
 //EVENTS
 
 //Removes all items from cart and set cartPrice to 0
@@ -276,40 +315,5 @@ checkOutBtn.addEventListener("click", () => {
     });
   }
 });
-
-//Starting DOM cards and carousels
-function loadCards() {
-  //Adding the snowboard cards to the snowboards carrousel
-  const burtonSB = document.getElementById("burtonSnowboards");
-  addCardsToCarousel(0, 2, burtonSB);
-  const capitaSB = document.getElementById("capitaSnowboards");
-  addCardsToCarousel(3, 5, capitaSB);
-  const salomonSB = document.getElementById("salomonSnowboards");
-  addCardsToCarousel(6, 8, salomonSB);
-
-  //Adding the goggles cards
-  const goggles = document.getElementById("goggles");
-  addCards(9, 14, goggles);
-
-  //Adding the boots cards to the boots carrousel
-  const burtonB = document.getElementById("burtonBoots");
-  addCardsToCarousel(15, 17, burtonB);
-  const dcB = document.getElementById("dcBoots");
-  addCardsToCarousel(18, 20, dcB);
-  const salomonB = document.getElementById("salomonBoots");
-  addCardsToCarousel(21, 23, salomonB);
-
-  //Adding the helmets cards.
-  const helmets = document.getElementById("helmets");
-  addCards(24, 29, helmets);
-
-  //Adding the bindings cards to the bindings carrousel
-  const burtonBi = document.getElementById("burtonBi");
-  addCardsToCarousel(30, 32, burtonBi);
-  const clewBi = document.getElementById("clewBi");
-  addCardsToCarousel(33, 34, clewBi);
-  const salomonBi = document.getElementById("salomonBi");
-  addCardsToCarousel(35, 37, salomonBi);
-}
 
 loadProducts();
